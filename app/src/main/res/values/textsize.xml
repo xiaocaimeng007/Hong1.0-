@@ -1,0 +1,17 @@
+<resources>
+
+    <!-- h1基本用于titlebar标题一级 -->
+    <!--<dimen name="h1">23sp</dimen>-->
+    <!-- h2暂无明确使用，预留 -->
+    <!--<dimen name="h2">20sp</dimen>-->
+    <!-- h3主要用于控件、按钮文本等效果 -->
+    <dimen name="h3">17sp</dimen>
+    <!-- h4主要用于条目中的主标题 -->
+    <!--<dimen name="h4">15sp</dimen>-->
+    <!-- h5主要用于条目中的简介描述等-->
+    <!--<dimen name="h5">14sp</dimen>-->
+    <!-- h6用户优惠券标签 -->
+    <!--<dimen name="h6">12sp</dimen>-->
+    <!-- h7用于推荐，关注等 -->
+    <!--<dimen name="h7">10sp</dimen>-->
+</resources>

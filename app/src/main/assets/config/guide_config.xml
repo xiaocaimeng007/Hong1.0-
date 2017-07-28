@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resource>
+    <!--配置介绍:
+    gravity:共计16个方向,对应指导图对应按钮的方向
+    //左边方向
+    public static final int LEFT_TOP = 0;
+    public static final int LEFT_CENTER = 1;
+    public static final int LEFT_BOTTOM = 2;
+    //上边方向
+    public static final int TOP_LEFT = 3;
+    public static final int TOP_CENTER = 4;
+    public static final int TOP_RIGHT = 5;
+    //右边方向
+    public static final int RIGHT_TOP = 6;
+    public static final int RIGHT_CENTER = 7;
+    public static final int RIGHT_BOTTOM = 8;
+    //下边方向
+    public static final int BOTTOM_LEFT = 9;
+    public static final int BOTTOM_CENTER = 10;
+    public static final int BOTTOM_RIGHT = 11;
+    //四个边角居中方向
+    public static final int LEFT_TOP_CENTER = 12;
+    public static final int RIGHT_TOP_CENTER = 13;
+    public static final int LEFT_BOTTOM_CENTER = 14;
+    public static final int RIGHT_BOTTOM_CENTER = 15;
+
+    guide:代表引导介绍图资源
+    id:代表需要引导的控件id,会根据控件得到需要引导控件大小,以及位置信息
+    width:控件空白区域指定大小
+    height:控件空白区域指定大小
+    padding:控件空白区域内边距
+    infoWidth:代表引导图大小,不设定即为默认图片宽
+    infoHeight:代表引导图大小,不设定即为默认图片高
+    mask:用来控件空白区域的图片资源
+    xOffset:用来作为Gravity的相对横向偏移量
+    yOffset:用来作为Gravity的相对纵向偏移量
+
+    name:为引导界面类名
+
+    注:因为每个引导界面,使用的都是activity的根容器,所以是可以在最外围设定.然后找到activity所属的fragment内的控件
+    对于Listview,有更细的控件查找方式
+    child:代表所属viewgroup查找个数
+    list:代表总的复用viewgroup控件id
+    如果以上两个不写,则会直接找到id,否则查找控件顺序为  list->child->findViewById,用以查找到listview或是一个ViewGroup内的子控件
+
+-->
+    <guide name="MainActivity">
+        <!--<item gravity="bottom_right" guide="@drawable/guide_channel_info1" id="rb_home"-->
+            <!--infoHeight="37" infoWidth="181" mask="@drawable/mask_bg" padding="8" xOffset="-40" yOffset="10"/>-->
+
+        <item gravity="bottom_left" guide="@drawable/guide_channel_info2" id="rb_seeksupply"
+            infoHeight="43" infoWidth="113" mask="@drawable/ranking_btn" xOffset="30" yOffset="10" />
+    </guide>
+</resource>

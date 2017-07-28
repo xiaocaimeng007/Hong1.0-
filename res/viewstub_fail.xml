@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_fail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone"
+    tools:showIn="@layout/fragment_seeksupply">
+
+    <ImageView
+        android:id="@+id/iv_fail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:src="@drawable/bg_loading_failed_refresh" />
+
+    <TextView
+        android:id="@+id/tv_fail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_fail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="加载失败，点击屏幕重试"
+        android:textColor="#C1C9D9"
+        android:textSize="16sp" />
+</RelativeLayout>

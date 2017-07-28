@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<TextView
+        android:id="@+id/tv_setOftenStation"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/add"
+        android:gravity="center"
+        android:layout_marginLeft="15dp"
+        android:text="添  加"
+        android:textColor="@color/white"
+        android:textSize="18sp" />-->
+
+   <!-- <RelativeLayout
+        android:layout_marginLeft="15dp"
+        android:id="@+id/tv_setOftenStation"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </RelativeLayout>-->
+
+    <ImageView
+        android:layout_marginLeft="15dp"
+        android:id="@+id/tv_setOftenStation"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/add"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="配货大厅"
+        android:textColor="@android:color/white"
+        android:textSize="24sp" />
+
+    <ToggleButton
+        android:id="@+id/tv_delete"
+        android:button="@null"
+        android:background="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:scaleType="fitXY"
+        android:textOff="删除"
+        android:textOn="取消"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:gravity="center" />
+
+</RelativeLayout>

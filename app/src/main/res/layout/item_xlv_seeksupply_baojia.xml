@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <View
+        android:id="@+id/v_ifread"
+        android:visibility="visible"
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:paddingBottom="2dp"
+        android:background="#f05b33">
+    </View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/city"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="6dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/include_topaddress_tv_begin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    tools:text="上海"
+                    />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginLeft="6dp"
+                    android:src="@drawable/indexright"/>
+
+                <TextView
+                    android:id="@+id/include_topaddress_tv_end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#f05b33"
+                    tools:text="合肥"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/time"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="6dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/item_tv_chechang"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="6dp"
+                    android:background="#ec7957"
+                    android:gravity="center"
+                    tools:text="17.5米"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/item_tv_zhongliang"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:background="#47b83f"
+                    android:gravity="center"
+                    tools:text="30.5吨"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="6dp">
+            <TextView
+                android:id="@+id/item_tv_chexing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="高栏"
+                android:layout_marginRight="4dp"
+                android:textColor="#001B26"/>
+            <TextView
+                android:id="@+id/item_tv_goodsname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="螺丝钉"
+                android:layout_marginRight="4dp"
+                android:textColor="#001B26"/>
+            <TextView
+                android:id="@+id/item_tv_mark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                tools:text="我是备注我是备注我是备"
+                android:layout_marginRight="4dp"
+                android:textColor="#001B26"/>
+
+
+            <TextView
+                android:id="@+id/item_tv_baojia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                tools:text="10000"
+                android:layout_marginRight="4dp"
+                android:textColor="#3764df"/>
+            <TextView
+                android:id="@+id/item_tv_time"
+                android:layout_below="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:layout_marginRight="10dp"
+                tools:text="昨天 15:56"
+                android:textColor="#001B26"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="1dp"
+                android:background="#efefef"></View>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="1dp"
+                android:background="#efefef"></View>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

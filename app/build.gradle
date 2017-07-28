@@ -1,0 +1,191 @@
+//这个文件是app文件夹下这个Module的gradle配置文件，也可以算是整个项目最主要的gradle配置文件
+// 声明是Android程序 文件开头apply plugin是最新gradle版本的写法，以前的写法是apply plugin: ‘android’,
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+//android 5.0开始默认安装jdk1.7才能编译
+//minifyEnabled（混淆）也是最新的语法，很早之前是runProguard,这个也需要更新下
+
+//compile project(‘:extras:ShimmerAndroid’)这一行是因为项目中存在其他Module，
+// 你可以理解成Android Library，由于Gradle的普及以及远程仓库的完善，
+// 这种依赖渐渐的会变得非常不常见，但是你需要知道有这种依赖的
+
+//设置编译android项目的参数，接下来，我们构建android项目的所有配置都在这里完成
+android {
+    // 编译SDK的版本
+//    说明要运行该21的源码，你必需已经安装了android API 21
+    //最低版本和目标版本会通知给操作系统
+    //而编译版本是我们和编译器之间的私有信息
+    //android的特色功能是通过sdk中的类和方法展现的
+    compileSdkVersion 21
+    // 编译的Tools版本   这个需要你本地安装该版本才行，很多人导入新的第三方库，
+    // 失败的原因之一是build version的版本不对，
+    // 这个可以手动更改成你本地已有的版本或者打开 SDK Manager 去下载对应版本
+//    说明要运行该源码，你必须已经安装了 android sdk build-tools 22.0.1
+    buildToolsVersion "25.0.3"
+
+//    关闭Android Studio的PNG合法性检查
+//    aaptOptions.cruncherEnabled = false
+//    aaptOptions.useNewCruncher = false
+//    compileOptions.encoding = "GBK"
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    defaultConfig {//默认配置
+        // 应用的包名
+        applicationId "com.hongbao5656"
+        minSdkVersion 15//支持的最低版本  即4.0.2以上版本都有运行该app的权限
+        targetSdkVersion 21//支持的目标版本  即5.0  确定的是app的运行那个版本的效果
+        versionCode 215//版本号
+        versionName "2.1.5"//版本名
+        // dex突破65535
+        multiDexEnabled true
+        // 默认是umeng的渠道
+        manifestPlaceholders = [UMENG_CHANNEL_VALUE: "cr"]
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    // java版本
+//    compileOptions {
+//        sourceCompatibility JavaVersion.VERSION_1_7
+//        targetCompatibility JavaVersion.VERSION_1_7
+//    }
+
+    // 移除lint检查的error
+    lintOptions {//lint时终止错误上报,防止编译的时候莫名的失败
+//        disable 'MissingTranslation', 'ExtraTranslation'
+        abortOnError false
+    }
+
+    sourceSets {//目录指向配置
+        main {
+            java.srcDirs = ['src/main/java']//指定source目录
+            jniLibs.srcDirs = ['libs']//指定lib库目录
+//            manifest.srcFile 'src/main/AndroidManifest.xml'//指定AndroidManifest文件
+//            resources.srcDirs = ['src/main/resources']
+//            aidl.srcDirs = ['src/main/aidl']
+//            renderscript.srcDirs = ['src/maom']
+//            res.srcDirs = ['src/main/res']
+//            assets.srcDirs = ['src/main/assets']//指定assets目录
+//            jniLibs.srcDir 'src/main/jniLibs'
+//            resources.srcDirs = ['src']//指定source目录
+//            aidl.srcDirs = ['src']//指定source目录
+//            renderscript.srcDirs = ['src']//指定source目录
+//            res.srcDirs = ['res']//指定资源目录
+//            assets.srcDirs = ['assets']//指定assets目录
+        }
+//        debug.setRoot('build-types/debug')//指定debug模式的路径
+//        release.setRoot('build-types/release')//指定release模式的路径
+    }
+
+    //keystore签名配置
+    signingConfigs {
+        debug {//debug版签名配置
+            //密钥文件路径
+            storeFile file("E:\\HYTX\\app\\src\\hbtxapp.keystore")
+            //密钥文件密码
+            storePassword "hb20130207"
+            //key别名
+            keyAlias "hbtx"
+            //key密码
+            keyPassword "hb20130207"
+        }
+
+        release {//发布版签名配置
+            // 也可以像上面一样直接写文件目录
+            storeFile file("E:\\HYTX\\app\\src\\hbtxapp.keystore")
+//            D:\hytxapp\HYTX\app\src\hbtxapp.keystore
+            storePassword "hb20130207"
+            keyAlias "hbtx"
+            keyPassword "hb20130207"
+        }
+    }
+
+    productFlavors {
+        xastdm {}
+//        xiaomi {}
+//        _360 {}
+//        wandoujia {}
+    }
+
+
+    buildTypes {//build类型
+
+        debug {//调试模式
+            // 显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            versionNameSuffix "-debug"
+            //不做混淆
+            minifyEnabled false
+            zipAlignEnabled true
+            shrinkResources false
+            signingConfig signingConfigs.release//设置签名信息
+        }
+
+        release {//发布模式
+            //不显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            //做混淆
+            minifyEnabled true
+            //Zipalign优化
+            zipAlignEnabled true
+            //移除无用的resource文件
+            shrinkResources false
+            //proguardFiles这部分有两段，前一部分代表系统默认的android程序的混淆文件，
+            //该文件已经包含了基本的混淆声明，免去了我们很多事，
+            // 这个文件的目录在 /tools/proguard/proguard-android.txt ,
+            // 后一部分是我们项目里的自定义的混淆文件，目录就在 app/proguard-rules.txt ,
+            // 如果你用Studio 1.0创建的新项目默认生成的文件名是 proguard-rules.pro ,
+            // 这个名字没关系，在这个文件里你可以声明一些第三方依赖的一些混淆规则,后面会具体讲到
+//            proguardFiles getDefaultProguardFile'proguard-rules.pro'
+//            proguardFiles getDefaultProguardFile('proguard-android.txt')
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //proguardFile 'some-other-rules.txt'  配置单个文件这样
+            proguardFile 'proguard-rules.pro'//指定混淆规则文件
+            signingConfig signingConfigs.release//设置签名信息
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        // 输出apk名称为boohee_v1.0_2015-01-15_wandoujia.apk
+                        def fileName = "hytx5656_${defaultConfig.versionName}_${releaseTime()}_${variant.productFlavors[0].name}.apk"
+                        output.outputFile = new File(outputFile.parent, fileName)
+                    }
+                }
+            }
+        }
+    }
+}
+
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("PRC"))
+//    return new Date().format("yyyy-MM-dd-HH-mm-ss", TimeZone.getTimeZone("UTC"))
+}
+
+dependencies {//需要用到的第三方库
+    compile fileTree(dir: 'libs', include: ['*.jar'])//编译lib目录下的.jar文件
+    //编译来自Jcenter的第三方开源库
+    //突破65535分包用的
+    //    compile 'com.android.support:appcompat-v7:22.2.1'
+    //    compile project(':Easylink')//编译附加的项目
+    compile 'com.yipianfengye:MLog:1.0.0'
+    compile 'com.android.support:multidex:1.0.0'
+    compile 'com.google.guava:guava:18.0'
+    compile 'com.android.support:support-v4:21.0.3'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.android.support:support-annotations:22.1.1'
+    compile 'com.android.support:appcompat-v7:21.0.3'
+    //android view的绑定注解框架
+    compile 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+
+}

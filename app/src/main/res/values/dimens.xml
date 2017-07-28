@@ -1,0 +1,260 @@
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="abc_action_bar_default_height_material">56.0dip</dimen>
+    <dimen name="abc_action_bar_default_padding_material">4.0dip</dimen>
+    <dimen name="abc_action_bar_progress_bar_size">40.0dip</dimen>
+    <dimen name="abc_text_size_subtitle_material_toolbar">16.0dip</dimen>
+    <dimen name="abc_text_size_title_material_toolbar">20.0dip</dimen>
+    <dimen name="abc_config_prefDialogWidth">320.0dip</dimen>
+    <dimen name="abc_search_view_text_min_width">160.0dip</dimen>
+
+    <item name="dialog_fixed_height_major" type="dimen">79.99999%</item>
+    <item name="dialog_fixed_height_minor" type="dimen">100.0%</item>
+
+    <dimen name="dialog_fixed_width_major">320.0dip</dimen>
+    <dimen name="dialog_fixed_width_minor">320.0dip</dimen>
+    <dimen name="BasicTextSize">15.0dip</dimen>
+    <!--<dimen name="ConversationItemHeight">58.0dip</dimen>-->
+    <!--<dimen name="HeTongLieBiaoSize">16.0sp</dimen>-->
+    <!--<dimen name="HeTongTextSize">18.0sp</dimen>-->
+    <!--<dimen name="LargeAvatarSize">56.0dip</dimen>-->
+    <dimen name="LargeTextSize">16.0dip</dimen>
+    <!--<dimen name="LargestTextSize">30.0dip</dimen>-->
+    <dimen name="MyTextSize16">16.0sp</dimen>
+    <!--<dimen name="MyTextSize18">18.0sp</dimen>-->
+    <dimen name="PreferenceItemHeight">42.0dip</dimen>
+    <dimen name="SmallTextSize">14.0dip</dimen>
+    <dimen name="SmallerTextSize">13.0dip</dimen>
+    <dimen name="TitleTextSize">18.0dip</dimen>
+    <dimen name="abc_action_bar_icon_vertical_padding_material">16.0dip</dimen>
+    <!--<dimen name="abc_action_bar_overflow_padding_start_material">6.0dip</dimen>-->
+    <dimen name="abc_action_bar_stacked_max_height">48.0dip</dimen>
+    <dimen name="abc_action_bar_stacked_tab_max_width">180.0dip</dimen>
+    <dimen name="abc_action_bar_subtitle_bottom_margin_material">5.0dip</dimen>
+    <dimen name="abc_action_bar_subtitle_top_margin_material">-3.0dip</dimen>
+    <dimen name="abc_action_button_min_height_material">48.0dip</dimen>
+    <dimen name="abc_action_button_min_width_material">48.0dip</dimen>
+    <dimen name="abc_action_button_min_width_overflow_material">36.0dip</dimen>
+
+    <!--<item name="abc_button_inset_horizontal_material" type="dimen">-->
+        <!--@dimen/abc_control_inset_material-->
+    <!--</item>-->
+
+    <!--<dimen name="abc_button_inset_vertical_material">6.0dip</dimen>-->
+    <!--<dimen name="abc_button_padding_horizontal_material">8.0dip</dimen>-->
+
+    <!--<item name="abc_button_padding_vertical_material" type="dimen">-->
+        <!--@dimen/abc_control_padding_material-->
+    <!--</item>-->
+
+    <!--<dimen name="abc_control_corner_material">2.0dip</dimen>-->
+    <dimen name="abc_control_inset_material">4.0dip</dimen>
+    <dimen name="abc_control_padding_material">4.0dip</dimen>
+    <!--<dimen name="abc_dialog_list_padding_vertical_material">8.0dip</dimen>-->
+
+    <!--<item name="abc_dialog_min_width_major" type="dimen">65.0%</item>-->
+    <!--<item name="abc_dialog_min_width_minor" type="dimen">95.00001%</item>-->
+
+    <!--<dimen name="abc_dialog_padding_material">24.0dip</dimen>-->
+    <!--<dimen name="abc_dialog_padding_top_material">18.0dip</dimen>-->
+
+    <!--<item name="abc_disabled_alpha_material_dark" type="dimen">0.3</item>-->
+    <!--<item name="abc_disabled_alpha_material_light" type="dimen">0.26</item>-->
+
+    <dimen name="abc_dropdownitem_icon_width">32.0dip</dimen>
+    <dimen name="abc_dropdownitem_text_padding_left">8.0dip</dimen>
+    <dimen name="abc_dropdownitem_text_padding_right">8.0dip</dimen>
+    <!--<dimen name="abc_edit_text_inset_bottom_material">7.0dip</dimen>-->
+    <!--<dimen name="abc_edit_text_inset_horizontal_material">4.0dip</dimen>-->
+    <!--<dimen name="abc_edit_text_inset_top_material">10.0dip</dimen>-->
+    <!--<dimen name="abc_floating_window_z">16.0dip</dimen>-->
+
+    <!--<item name="abc_list_item_padding_horizontal_material" type="dimen">-->
+        <!--@dimen/abc_action_bar_content_inset_material-->
+    <!--</item>-->
+
+    <dimen name="abc_panel_menu_list_width">296.0dip</dimen>
+    <dimen name="abc_search_view_preferred_width">320.0dip</dimen>
+    <dimen name="abc_text_size_body_1_material">14.0sp</dimen>
+    <dimen name="abc_text_size_body_2_material">14.0sp</dimen>
+    <dimen name="abc_text_size_button_material">14.0sp</dimen>
+    <dimen name="abc_text_size_caption_material">12.0sp</dimen>
+    <dimen name="abc_text_size_display_1_material">34.0sp</dimen>
+    <dimen name="abc_text_size_display_2_material">45.0sp</dimen>
+    <dimen name="abc_text_size_display_3_material">56.0sp</dimen>
+    <dimen name="abc_text_size_display_4_material">112.0sp</dimen>
+    <dimen name="abc_text_size_headline_material">24.0sp</dimen>
+    <dimen name="abc_text_size_large_material">22.0sp</dimen>
+    <dimen name="abc_text_size_medium_material">18.0sp</dimen>
+    <dimen name="abc_text_size_menu_material">16.0sp</dimen>
+    <dimen name="abc_text_size_small_material">14.0sp</dimen>
+    <dimen name="abc_text_size_subhead_material">16.0sp</dimen>
+    <dimen name="abc_text_size_title_material">20.0sp</dimen>
+    <!--<dimen name="appbar_elevation">4.0dip</dimen>-->
+    <!--<dimen name="bottom_tab_font_size">15.0dip</dimen>-->
+    <!--<dimen name="bottom_tab_padding_drawable">2.0dip</dimen>-->
+    <!--<dimen name="bottom_tab_padding_up">10.0dip</dimen>-->
+    <!--<dimen name="button_height">40.0dip</dimen>-->
+    <!--<dimen name="cardview_compat_inset_shadow">1.0dip</dimen>-->
+    <!--<dimen name="cardview_default_elevation">2.0dip</dimen>-->
+    <!--<dimen name="cardview_default_radius">2.0dip</dimen>-->
+    <!--<dimen name="default_circle_indicator_radius">3.0dip</dimen>-->
+    <!--<dimen name="default_circle_indicator_stroke_width">1.0dip</dimen>-->
+    <!--<dimen name="default_line_indicator_gap_width">4.0dip</dimen>-->
+    <!--<dimen name="default_line_indicator_line_width">12.0dip</dimen>-->
+    <!--<dimen name="default_line_indicator_stroke_width">1.0dip</dimen>-->
+    <!--<dimen name="default_title_indicator_clip_padding">4.0dip</dimen>-->
+    <!--<dimen name="default_title_indicator_footer_indicator_height">4.0dip</dimen>-->
+    <!--<dimen name="default_title_indicator_footer_indicator_underline_padding">20.0dip</dimen>-->
+    <!--<dimen name="default_title_indicator_footer_line_height">2.0dip</dimen>-->
+    <!--<dimen name="default_title_indicator_footer_padding">7.0dip</dimen>-->
+    <!--<dimen name="default_title_indicator_text_size">15.0dip</dimen>-->
+    <!--<dimen name="default_title_indicator_title_padding">5.0dip</dimen>-->
+    <!--<dimen name="default_title_indicator_top_padding">7.0dip</dimen>-->
+
+    <item name="disabled_alpha_material_dark" type="dimen">0.3</item>
+    <item name="disabled_alpha_material_light" type="dimen">0.26</item>
+
+    <!--<dimen name="fab_border_width">0.5dip</dimen>-->
+    <!--<dimen name="fab_content_size">24.0dip</dimen>-->
+    <!--<dimen name="fab_elevation">8.0dip</dimen>-->
+    <!--<dimen name="fab_size_mini">40.0dip</dimen>-->
+    <!--<dimen name="fab_size_normal">56.0dip</dimen>-->
+    <!--<dimen name="fab_translation_z_pressed">6.0dip</dimen>-->
+    <!--<dimen name="item_touch_helper_max_drag_scroll_per_frame">20.0dip</dimen>-->
+    <!--<dimen name="navigation_elevation">12.0dip</dimen>-->
+    <!--<dimen name="navigation_icon_padding">32.0dip</dimen>-->
+    <!--<dimen name="navigation_icon_size">24.0dip</dimen>-->
+    <!--<dimen name="navigation_max_width">320.0dip</dimen>-->
+    <!--<dimen name="navigation_padding_bottom">8.0dip</dimen>-->
+    <!--<dimen name="navigation_separator_vertical_padding">8.0dip</dimen>-->
+    <!--<dimen name="new_blog_size">63.0dip</dimen>-->
+    <!--<dimen name="notification_large_icon_height">64.0dip</dimen>-->
+    <!--<dimen name="notification_large_icon_width">64.0dip</dimen>-->
+    <!--<dimen name="notification_subtext_size">12.0dip</dimen>-->
+    <!--<dimen name="pulldown_auto_incremental">6.0dip</dimen>-->
+    <!--<dimen name="pulldown_headerview_height">70.0dip</dimen>-->
+    <!--<dimen name="pulldown_move_deviation">38.0dip</dimen>-->
+    <!--<dimen name="snackbar_elevation">2.0dip</dimen>-->
+    <!--<dimen name="snackbar_padding_horizontal">12.0dip</dimen>-->
+    <!--<dimen name="snackbar_padding_vertical">14.0dip</dimen>-->
+    <!--<dimen name="snackbar_text_size">14.0sp</dimen>-->
+    <!--<dimen name="sta_height">48.0dip</dimen>-->
+    <!--<dimen name="switch_logo_bottom_padding">20.0sp</dimen>-->
+    <!--<dimen name="tab_max_width">264.0dip</dimen>-->
+    <!--<dimen name="title_height">68.0dip</dimen>-->
+    <!--<dimen name="widget_content_margin_left">10.0dip</dimen>-->
+    <!--<dimen name="widget_content_margin_top">20.0dip</dimen>-->
+    <!--<dimen name="widget_height">80.0dip</dimen>-->
+    <!--<dimen name="widget_logo_size">30.0dip</dimen>-->
+    <!--<dimen name="widget_write_margin_left">10.0dip</dimen>-->
+    <!--<dimen name="widget_write_margin_top">19.0dip</dimen>-->
+    <!--<dimen name="dimen_3_dp">3dp</dimen>-->
+    <!--<dimen name="dimen_12_sp">12dp</dimen>-->
+    <!--<dimen name="dimen_11_sp">11dp</dimen>-->
+    <!--<dimen name="button_text_size">14sp</dimen>-->
+    <!--<dimen name="expand_tab_item_height">45dp</dimen>-->
+    <!--<dimen name="expand_tab_eara_height">380dp</dimen>-->
+    <!--<dimen name="head_bar_height">45dp</dimen>-->
+    <!--<dimen name="button_margin">3dp</dimen>-->
+    <!--<dimen name="tvsize_1dp">1dp</dimen>-->
+    <!--<dimen name="tvsize_2dp">2dp</dimen>-->
+    <!--<dimen name="tvsize_3dp">3dp</dimen>-->
+    <!--<dimen name="tvsize_4dp">4dp</dimen>-->
+    <!--<dimen name="tvsize_5dp">5dp</dimen>-->
+    <!--<dimen name="tvsize_6dp">6dp</dimen>-->
+    <!--<dimen name="tvsize_7dp">7dp</dimen>-->
+    <!--<dimen name="tvsize_8dp">8dp</dimen>-->
+    <!--<dimen name="tvsize_9dp">9dp</dimen>-->
+    <!--<dimen name="tvsize_10dp">10dp</dimen>-->
+    <!--<dimen name="tvsize_11dp">11dp</dimen>-->
+    <!--<dimen name="tvsize_12dp">12dp</dimen>-->
+    <!--<dimen name="tvsize_13dp">13dp</dimen>-->
+    <!--<dimen name="tvsize_14dp">14dp</dimen>-->
+    <!--<dimen name="tvsize_15dp">15dp</dimen>-->
+    <!--<dimen name="tvsize_16dp">16dp</dimen>-->
+    <!--<dimen name="tvsize_17dp">17dp</dimen>-->
+    <!--<dimen name="tvsize_18dp">18dp</dimen>-->
+    <!--<dimen name="tvsize_19dp">19dp</dimen>-->
+    <!--<dimen name="tvsize_20dp">20dp</dimen>-->
+    <!--<dimen name="tvsize_21dp">21dp</dimen>-->
+    <!--<dimen name="tvsize_22dp">22dp</dimen>-->
+    <!--<dimen name="tvsize_23dp">23dp</dimen>-->
+    <!--<dimen name="tvsize_24dp">24dp</dimen>-->
+    <!--<dimen name="tvsize_25dp">25dp</dimen>-->
+    <!--<dimen name="tvsize_26dp">26dp</dimen>-->
+    <!--<dimen name="tvsize_27dp">27dp</dimen>-->
+    <!--<dimen name="tvsize_28dp">28dp</dimen>-->
+    <!--<dimen name="tvsize_29dp">29dp</dimen>-->
+    <!--<dimen name="tvsize_30dp">30dp</dimen>-->
+    <!--<dimen name="tvsize_31dp">31dp</dimen>-->
+    <!--<dimen name="tvsize_32dp">32dp</dimen>-->
+    <!--<dimen name="tvsize_33dp">33dp</dimen>-->
+    <!--<dimen name="tvsize_34dp">34dp</dimen>-->
+    <!--<dimen name="tvsize_35dp">35dp</dimen>-->
+    <!--<dimen name="tvsize_36dp">36dp</dimen>-->
+    <!--<dimen name="tvsize_37dp">37dp</dimen>-->
+    <!--<dimen name="tvsize_38dp">38dp</dimen>-->
+    <!--<dimen name="tvsize_39dp">39dp</dimen>-->
+    <!--<dimen name="tvsize_40dp">40dp</dimen>-->
+    <!--<dimen name="tvsize_41dp">41dp</dimen>-->
+    <!--<dimen name="tvsize_42dp">42dp</dimen>-->
+    <!--<dimen name="tvsize_43dp">43dp</dimen>-->
+    <!--<dimen name="tvsize_44dp">44dp</dimen>-->
+    <!--<dimen name="tvsize_45dp">45dp</dimen>-->
+    <!--<dimen name="tvsize_46dp">46dp</dimen>-->
+    <!--<dimen name="tvsize_47dp">47dp</dimen>-->
+    <!--<dimen name="tvsize_48dp">48dp</dimen>-->
+    <!--<dimen name="tvsize_49dp">49dp</dimen>-->
+    <!--<dimen name="tvsize_50dp">50dp</dimen>-->
+    <!--<dimen name="margin_48dp">48dp</dimen>-->
+    <!--<dimen name="margin_40dp">40dp</dimen>-->
+    <!--<dimen name="margin_30dp">30dp</dimen>-->
+    <!--<dimen name="margin_10dp">10dp</dimen>-->
+    <!--<dimen name="margin_5dp">5dp</dimen>-->
+    <!-- 首页适配 -->
+    <!--<dimen name="home_page_dimen">12dp</dimen>-->
+    <!-- 按煤种适配 -->
+    <!--<dimen name="dimen_accord_coal">96dp</dimen>-->
+    <!--<dimen name="dimen_accord_coal_textsize">14sp</dimen>-->
+    <!--<dimen name="dimen_accord_coalname_textsize">18sp</dimen>-->
+
+    <dimen name="header_footer_left_right_padding">24dp</dimen>
+    <dimen name="header_footer_top_bottom_padding">12dp</dimen>
+    <dimen name="indicator_right_padding">10dp</dimen>
+    <dimen name="indicator_corner_radius">12dp</dimen>
+    <dimen name="indicator_internal_padding">4dp</dimen>
+
+    <!--<dimen name="title_text_size">22.0sp</dimen>-->
+    <!--<dimen name="level1_tv_size">17.0sp</dimen>-->
+    <!--<dimen name="level2_tv_size">15.0sp</dimen>-->
+    <!--<dimen name="level3_tv_size">13.0sp</dimen>-->
+    <!--<dimen name="level4_tv_size">11.0sp</dimen>-->
+    <!--<dimen name="level5_tv_size">9.0sp</dimen>-->
+    <!--<dimen name="text_size_level0">20.0sp</dimen>-->
+    <dimen name="text_size_level1">21.0sp</dimen>
+    <!--<dimen name="text_size_level2">19.0sp</dimen>-->
+    <dimen name="text_size_level3">17.0sp</dimen>
+    <dimen name="text_size_level4">15.0sp</dimen>
+    <!--<dimen name="user_avatar_height">75.0dip</dimen>-->
+    <!--<dimen name="user_avatar_height_big">150.0dip</dimen>-->
+    <!--<dimen name="user_avatar_width">75.0dip</dimen>-->
+    <!--<dimen name="user_avatar_width_big">150.0dip</dimen>-->
+    <!--<dimen name="normal_btn_height">50.0dip</dimen>-->
+    <!--<dimen name="ui_10_dip">10.0dip</dimen>-->
+
+    <!--微信开始-->
+    <!--<dimen name="LargeTextSize">16dp</dimen>-->
+    <!--<dimen name="BasicTextSize">15dp</dimen>-->
+    <!--<dimen name="TitleTextSize">18dp</dimen>-->
+    <!--<dimen name="SmallTextSize">14dp</dimen>-->
+    <!--<dimen name="SmallerTextSize">13dp</dimen>-->
+    <!--<dimen name="LargestTextSize">30dp</dimen>-->
+    <!--<dimen name="ChattingTextSize">16dp</dimen>-->
+    <!--<dimen name="ChattingContentMinHeight">49dp</dimen>-->
+    <!--<dimen name="PreferenceItemHeight">42dp</dimen>-->
+    <!--<dimen name="ConversationItemHeight">58dp</dimen>-->
+    <!--<dimen name="LargeAvatarSize">56dp</dimen>-->
+    <!--微信结束-->
+</resources>

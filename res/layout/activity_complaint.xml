@@ -1,0 +1,161 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E9ECF0" >
+
+    <RelativeLayout
+        android:id="@+id/default_title_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:background="@color/base_color"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <include layout="@layout/include_rightback"/>
+
+        <TextView
+            android:id="@+id/midTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="投诉"
+            android:textColor="@color/white"
+            android:textSize="19sp"/>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/rl_right"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical|center">
+            <TextView
+                android:id="@+id/iv_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@drawable/feedback"
+                android:text=""
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="17sp"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_below="@+id/default_title_bg"
+        android:id="@+id/ll_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="投诉："
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginBottom="19dp"
+            android:textSize="18sp"
+            android:textColor="#242222"/>
+
+        
+        <CheckBox
+            android:id="@+id/cb1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="#514f4f"
+            android:text="虚假信息/诈骗信息费"/>
+
+        <CheckBox
+            android:id="@+id/cb2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="#514f4f"
+            android:text="信息描述与实际不符"/>
+
+        <CheckBox
+            android:id="@+id/cb3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="#514f4f"
+            android:text="货主态度差/不接电话"/>
+
+        <CheckBox
+            android:id="@+id/cb4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="#514f4f"
+            android:text="货已走未删除"/>
+
+        <CheckBox
+            android:id="@+id/cb5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="#514f4f"
+            android:text="其他"/>
+        
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/rl_et"
+        android:layout_below="@+id/ll_select"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/white" >
+
+        <EditText
+            android:id="@+id/et_complaint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="4dp"
+            android:background="@null"
+            android:hint="补充说明可帮助客服尽快地处理投诉，如选择其他原因，请务必填写说明"
+            android:padding="10dp"
+            android:textColor="#514f4f"
+            android:textSize="14sp"
+            android:textColorHint="#b3b3b3"/>
+
+        <View
+            style="@style/dividing_line"
+            android:layout_alignParentTop="true" />
+
+        <View
+            style="@style/dividing_line"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+
+    <Button
+        android:layout_below="@+id/rl_et"
+        android:id="@+id/btn_complaint"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/material_button_blue"
+        android:text="立即投诉"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+</RelativeLayout>

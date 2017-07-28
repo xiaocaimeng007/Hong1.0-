@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/default_title_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:background="@color/base_color"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <include layout="@layout/include_rightback"/>
+
+        <TextView
+            android:id="@+id/midTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="支付宝充值"
+            android:textColor="@color/white"
+            android:textSize="19sp"/>
+
+        <TextView
+            android:id="@+id/iv_right"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="4dp"
+            android:gravity="center"
+            android:scaleType="fitXY"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="17sp"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="请输入充值金额"
+        android:textSize="17sp"
+        android:textColor="#777777"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/product_subject"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#F3F3F3"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:text="52.00"
+        android:textColor="#333333"
+        android:textSize="28sp"
+        android:layout_marginTop="12dp"/>
+
+    <Button
+        android:id="@+id/publish_commit"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="48dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/material_button_blue"
+        android:text="充值"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+</LinearLayout>

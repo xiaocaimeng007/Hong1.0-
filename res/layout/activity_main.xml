@@ -1,0 +1,104 @@
+<RelativeLayout
+    android:id="@+id/container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="top"
+        android:background="@color/base_color"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:orientation="horizontal"/>
+
+    <com.hongbao5656.view.IndexViewPager
+        android:id="@+id/vp_fragment"
+        android:layout_below="@+id/ll_top"
+        android:layout_above="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="58dp">
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/v_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e3e3e3"/>
+
+            <RadioGroup
+                android:id="@+id/rg_group"
+                android:layout_marginTop="4dp"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_home"
+                    style="@style/tab_selector_style"
+                    android:checked="true"
+                    android:drawableTop="@drawable/tab_home_selector"
+                    android:text="首页"/>
+
+                <RadioButton
+                    android:id="@+id/rb_fahuo"
+                    style="@style/tab_selector_style"
+                    android:drawableTop="@drawable/tab_fahuo_selector"
+                    android:text="发货"/>
+
+                <RadioButton
+                    android:id="@+id/rb_jishihuoyuan"
+                    style="@style/tab_selector_style"
+                    android:drawableTop="@drawable/tab_jishihuoyuan_selector"
+                    android:text="自动配货"/>
+
+                <RadioButton
+                    android:id="@+id/rb_seeksupply"
+                    style="@style/tab_selector_style"
+                    android:drawableTop="@drawable/tab_seeksupply_selector"
+                    android:text="找货"/>
+
+                <RadioButton
+                    android:id="@+id/rb_me"
+                    style="@style/tab_selector_style"
+                    android:drawableTop="@drawable/tab_my_selector"
+                    android:text="我的"/>
+            </RadioGroup>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rb_jishihuoyuan_count"
+        android:layout_marginLeft="185dp"
+        android:layout_marginBottom="36dp"
+        tools:text="99999999"
+        android:gravity="center"
+        android:background="@drawable/red"
+        android:layout_alignParentBottom="true"
+        android:textSize="12sp"
+        android:textColor="#FFFFFF">
+    </TextView>
+
+
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+   <!--  <ImageView
+        android:id="@+id/help3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/> -->
+    <RelativeLayout
+        android:id="@+id/rl_v1" 
+        android:layout_width="fill_parent"
+    	android:background="@drawable/guide3"
+        android:layout_height="match_parent"
+        >
+
+        <Button
+            android:id="@+id/start"
+            android:layout_width="169dp"
+            android:layout_height="39dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="#ff7667"
+            android:layout_marginBottom="44dp"
+            android:text="立即体验"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

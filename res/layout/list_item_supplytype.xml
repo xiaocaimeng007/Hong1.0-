@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/layout_gridview_item"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:background="@drawable/selector_color_place">
+
+        <TextView
+            android:id="@+id/btn_shi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:focusable="false"
+            android:gravity="center"
+            android:text="西安"
+            android:textColor="@color/btn_textcolor_selector"
+            android:textSize="18sp"/>
+
+        <ImageView
+            android:id="@+id/line_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#DFE4EB"/>
+
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:background="#DFE4EB"/>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_allline"
+        android:layout_width="match_parent"
+        android:background="#C8C8C8"
+        android:layout_height="60dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:gravity="center|left"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="点击查看全部线路货源"
+            android:textColor="#000000"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/rl_allline_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/red"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            tools:text="99999"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"/>
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/v"
+        android:layout_below="@+id/rl_allline"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#c2c2c2"></View>
+    <View
+        android:layout_below="@+id/v"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></View>
+
+    <FrameLayout
+        android:layout_below="@+id/v"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/lv_offenline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv"
+            android:divider="#efefef"
+            android:dividerHeight="1dp">
+        </ListView>
+
+        <CheckBox
+            android:id="@+id/cb_jpush"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:layout_margin="10dp"
+            android:background="@drawable/selector_img_peihuo"
+            android:button="@null"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_level1"/>
+    </FrameLayout>
+</RelativeLayout>

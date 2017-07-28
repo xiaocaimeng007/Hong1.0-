@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="wrap_content"
+    android:layout_height="100dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="99dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="13dp"
+            android:layout_marginLeft="18dp"
+            android:orientation="vertical">
+
+            <com.hongbao5656.view.RoundedImageView
+                android:id="@+id/raiv_userphoto"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginBottom="9dp"
+                android:src="@drawable/morentx"/>
+
+            <TextView
+                android:id="@+id/tv_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="吴凌云"
+                android:layout_gravity="center"
+                android:textSize="12dp"
+
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/include_topaddress_tv_begin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:text="银川"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:src="@drawable/indexright"/>
+
+                <TextView
+                    android:id="@+id/include_topaddress_tv_end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#f05b33"
+                    android:text="银川"
+                    />
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/include_topaddress_tv_end_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:textColor="#f05b33"
+                    android:text="(宁夏)"
+                    />
+
+
+                <TextView
+                    android:id="@+id/chechang"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/chechang"
+                    android:gravity="center"
+                    android:text="12.5米"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"/>
+
+
+                <TextView
+                    android:id="@+id/zhongliang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/zhongliang"
+                    android:gravity="center"
+                    android:text="25.3吨"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/chexing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/chexing"
+                    android:gravity="center"
+                    android:layout_marginRight="5dp"
+                    android:text="高栏"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"/>
+                <!--<include
+                    layout="@layout/include_topaddress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.7"/>-->
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/item_tv_chechang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="21dp"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center"
+                        android:text="当前状态："
+                        android:textSize="14sp"
+                        android:textColor="#696969"/>
+
+                    <TextView
+                        android:id="@+id/kongcheshijian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center"
+                        android:text="空车时间：07-25 08:39到08-26 23:40"
+                        android:textSize="14sp"
+                        android:textColor="#696969"/>
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/item_tv_chexing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/chexing"
+                        android:gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:text="高栏"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"/>
+
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/item_tv_goodsname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/goodsname"
+                        android:gravity="center"
+                        android:text="普货"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/item_iv_call"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/tellright_selector"
+                    android:layout_marginRight="8dp"
+                    android:layout_alignParentRight="true"/>
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/item_tv_mark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="当前位置："
+                    android:textSize="14sp"
+                    android:textColor="#696969"/>
+
+                <com.hongbao5656.view.AlwaysMarqueeTextView
+                    android:id="@+id/location"
+                    android:layout_toRightOf="@+id/item_tv_mark"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="上海"
+                    android:textSize="14sp"
+                    android:textColor="#696969"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    android:focusableInTouchMode="true"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:focusable="true"/>
+
+                <TextView
+                    android:id="@+id/juli"
+                    android:layout_marginRight="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="小于100km"
+                    android:textSize="14sp"
+                    android:textColor="#696969"/>
+
+                <TextView
+                    android:id="@+id/item_tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:text=""
+                    android:textSize="13sp"
+                    android:textColor="#9e9e9e"/>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#efefef"></View>
+
+
+
+</LinearLayout>

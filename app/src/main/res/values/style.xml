@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+   <!--<style name="push_style">-->
+		<!--<item name="android:hint">@string/style_hint</item>-->
+		<!--<item name="android:inputType">number</item>-->
+		<!--<item name="android:textSize">14sp</item>-->
+	<!--</style>-->
+	<!--<style name="push_alias">-->
+		<!--<item name="android:hint">@string/alias_hint</item>-->
+		<!--<item name="android:textSize">14sp</item>-->
+	<!--</style>-->
+	<!--<style name="push_tag">-->
+		<!--<item name="android:hint">@string/tag_hint</item>-->
+		<!--<item name="android:textSize">14sp</item>-->
+	<!--</style>-->
+
+	<!-- 设置字体大小 theme -->
+	<!--<style name="Theme_Small">
+		<item name="fontsize_place_of_goods">16sp</item>
+		<item name="fontsize_remarks">12sp</item>
+		<item name="fontsize_time">8sp</item>
+	</style>
+	<style name="Theme_Medium">
+		<item name="fontsize_place_of_goods">20sp</item>
+		<item name="fontsize_remarks">16sp</item>
+		<item name="fontsize_time">15sp</item>
+	</style>
+	<style name="Theme_Large">
+		<item name="fontsize_place_of_goods">32sp</item>
+		<item name="fontsize_remarks">20sp</item>
+		<item name="fontsize_time">25sp</item>
+	</style>-->
+
+	<style name="Theme_Text_0">
+		<item name="fontsize_place_of_goods">16sp</item>
+		<item name="fontsize_remarks">12sp</item>
+	</style>
+	<style name="Theme_Text_1">
+		<item name="fontsize_place_of_goods">18sp</item>
+		<item name="fontsize_remarks">13sp</item>
+	</style>
+	<style name="Theme_Text_2">
+		<item name="fontsize_place_of_goods">20sp</item>
+		<item name="fontsize_remarks">14sp</item>
+	</style>
+	<style name="Theme_Text_3">
+		<item name="fontsize_place_of_goods">22sp</item>
+		<item name="fontsize_remarks">15sp</item>
+	</style>
+	<style name="Theme_Text_4">
+		<item name="fontsize_place_of_goods">24sp</item>
+		<item name="fontsize_remarks">16sp</item>
+	</style>
+	<style name="Theme_Text_5">
+		<item name="fontsize_place_of_goods">26sp</item>
+		<item name="fontsize_remarks">17sp</item>
+	</style>
+	<style name="Theme_Text_6">
+		<item name="fontsize_place_of_goods">28sp</item>
+		<item name="fontsize_remarks">18sp</item>
+	</style>
+	<style name="Theme_Text_7">
+		<item name="fontsize_place_of_goods">30sp</item>
+		<item name="fontsize_remarks">19sp</item>
+	</style>
+	<style name="Theme_Text_8">
+		<item name="fontsize_place_of_goods">32sp</item>
+		<item name="fontsize_remarks">20sp</item>
+	</style>
+
+	<!-- 为相应的控件设置style -->
+	<!--<style name="place_of_goods_text">-->
+		<!--<item name="android:textSize">?@attr/fontsize_place_of_goods</item>-->
+	<!--</style>-->
+	<!--<style name="remarks_text">-->
+		<!--<item name="android:textSize">?@attr/fontsize_remarks</item>-->
+	<!--</style>-->
+	<!--<style name="time_text">-->
+		<!--<item name="android:textSize">?@attr/fontsize_time</item>-->
+	<!--</style>-->
+</resources>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/default_title_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:background="@color/base_color"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <include layout="@layout/include_rightback"/>
+
+        <TextView
+            android:id="@+id/midTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="省市选择"
+            android:textColor="@color/white"
+            android:textSize="19sp"/>
+
+        <TextView
+            android:id="@+id/iv_right"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="4dp"
+            android:gravity="center"
+            android:scaleType="fitXY"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="17sp"/>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:background="#ebebeb"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_height="48dp">
+
+        <EditText
+            android:id="@+id/et_search"
+            android:background="@drawable/shape_et"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:drawableLeft="@drawable/search_grey"
+            android:drawablePadding="10dp"
+            android:layout_gravity="center"
+            android:hint="请输入相关地名"
+            android:textColorHint="#b6b6b6"
+            android:maxLength="11"
+            android:paddingLeft="11dp"
+            android:singleLine="true"
+            android:textColor="@color/base_color"
+            android:textSize="13sp"/>
+
+        <ImageButton
+            android:id="@+id/ib_search_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="12dp"
+            android:background="@color/white"
+            android:src="@drawable/delete_smaill"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/bottomlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:id="@+id/rg"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/btn_sheng"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:textColor="@color/chk_bottom_text_selector"
+                android:drawableRight="@drawable/tmpright"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="省份"
+                android:textSize="17sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#ebebeb" />
+
+            <RadioButton
+                android:id="@+id/btn_shi"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:textColor="@color/chk_bottom_text_selector"
+                android:drawableRight="@drawable/tmpright"
+                android:layout_weight="1"
+                android:button="@null"
+                android:text="城市"
+                android:textSize="17sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#ebebeb" />
+
+            <RadioButton
+                android:id="@+id/btn_xian"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:textColor="@color/chk_bottom_text_selector"
+                android:drawableRight="@drawable/tmpright"
+                android:layout_weight="1"
+                android:button="@null"
+                android:text="县区"
+                android:textSize="17sp" />
+        </RadioGroup>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#c2c2c2" />
+
+        <GridView
+            android:id="@+id/gv_station"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:numColumns="3"
+            android:scrollbars="none"/>
+        <Button
+            android:id="@+id/btn_sure"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/material_button_blue"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/lv_keyword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:divider="#E9ECF0"
+        android:dividerHeight="1dp">
+    </ListView>
+
+</LinearLayout>

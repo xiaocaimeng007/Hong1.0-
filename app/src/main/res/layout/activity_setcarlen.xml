@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/default_title_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:background="@color/base_color"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <include layout="@layout/include_rightback"/>
+
+        <TextView
+            android:id="@+id/midTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="设置车长"
+            android:textColor="@color/white"
+            android:textSize="19sp"/>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical|center">
+            <TextView
+                android:id="@+id/iv_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@drawable/lishi"
+                android:text=""
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="17sp"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/default_title_bg"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+           <!-- <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="请设置接收推送货源的车长范围"
+                android:layout_gravity="center"
+                android:layout_marginTop="18dp"/>
+-->
+            <LinearLayout
+                android:id="@+id/cz"
+                style="@style/ll_container"
+                android:layout_height="42dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginLeft="36dp"
+                android:layout_marginRight="36dp">
+
+                <TextView
+                    style="@style/textview2"
+                    android:layout_weight="0.5"
+                    android:gravity="center|left"
+                    android:text="找货时最小车长："/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_startlen"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:digits="0123456789."
+                        android:hint="请输入起始车长"
+                        android:inputType="numberDecimal"
+                        android:maxLength="5"
+                        android:singleLine="true"
+                        android:textColor="#f05b33"
+                        android:textColorHint="#B5B1B1"
+
+                        android:textSize="14sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cc"
+                style="@style/ll_container"
+                android:layout_height="42dp"
+                android:layout_marginLeft="36dp"
+                android:layout_marginRight="36dp">
+
+                <TextView
+                    style="@style/textview2"
+                    android:gravity="center|left"
+                    android:layout_weight="0.5"
+                    android:text="找货时最大车长："/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/et_endcarlen"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:digits="0123456789."
+                        android:hint="请输入结束车长"
+                        android:inputType="numberDecimal"
+                        android:maxLength="5"
+                        android:singleLine="true"
+                        android:textColor="#f05b33"
+                        android:textColorHint="#B5B1B1"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+            <Button
+                android:id="@+id/publish_commit"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="23dp"
+                android:background="@drawable/material_button_blue"
+                android:text="保  存"
+                android:textColor="@color/white"
+                android:textSize="18sp"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

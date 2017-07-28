@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/default_title_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:background="@color/base_color"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <include layout="@layout/include_rightback"/>
+
+        <TextView
+            android:id="@+id/midTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="我的交易"
+            android:textColor="@color/white"
+            android:textSize="19sp"/>
+
+        <TextView
+            android:id="@+id/iv_right"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="4dp"
+            android:gravity="center"
+            android:scaleType="fitXY"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="17sp"/>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:background="#ebebeb"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_height="48dp">
+
+        <EditText
+            android:id="@+id/et_search"
+            android:background="@drawable/shape_et"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:drawableLeft="@drawable/search_grey"
+            android:drawablePadding="10dp"
+            android:layout_gravity="center"
+            android:hint="请输入相关信息"
+            android:textColorHint="#b6b6b6"
+            android:maxLength="11"
+            android:paddingLeft="11dp"
+            android:singleLine="true"
+            android:textColor="@color/base_color"
+            android:textSize="13sp"/>
+
+        <ImageButton
+            android:id="@+id/ib_search_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="12dp"
+            android:background="@color/white"
+            android:src="@drawable/delete_smaill"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+
+
+    <com.hongbao5656.refreshlistview.xlistview.XListView
+        android:id="@+id/xListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#00000000"
+        android:divider="#E9ECF0"
+        android:dividerHeight="0dp"
+        android:fadingEdge="none"
+        android:overScrollMode="never"
+        android:visibility="visible"
+        android:fastScrollEnabled="false"
+        android:listSelector="#00000000" />
+
+    <RelativeLayout
+        android:id="@+id/rl_null"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <!-- <ImageView
+            android:id="@+id/iv_null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="120dp"
+            android:src="@drawable/bg_goods_all_null" /> -->
+        <TextView
+            android:id="@+id/tv_null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_null"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:text="当前没有相关数据"
+            android:textColor="#C1C9D9"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_fail"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <ImageView
+            android:id="@+id/iv_fail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="120dp"
+            android:src="@drawable/bg_loading_failed_refresh" />
+        <TextView
+            android:id="@+id/tv_fail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_fail"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="加载失败，点击屏幕重试"
+            android:textColor="#C1C9D9"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</LinearLayout>

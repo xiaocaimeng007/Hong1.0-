@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/default_title_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:background="@color/base_color"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <include layout="@layout/include_rightback"/>
+
+        <TextView
+            android:id="@+id/midTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="发布货源"
+            android:textColor="@color/white"
+            android:textSize="19sp"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical|center">
+            <TextView
+                android:id="@+id/iv_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@drawable/location_selector"
+                android:text=""
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="17sp"/>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/default_title_bg"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                style="@style/ll_container"
+                android:layout_height="54dp"
+                android:layout_marginTop="0dp"
+                android:paddingRight="23dp" >
+
+                <TextView
+                    style="@style/textview2"
+                    android:textSize="16sp"
+                    android:textColor="#333232"
+                    android:layout_marginRight="10dp"
+                    android:text="始发地：" />
+
+                <Button
+                    android:id="@+id/btn_startsation"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:singleLine="true"
+                    android:ellipsize="middle"
+                    android:layout_weight="2.0"
+                    android:hint="选择出发地"
+                    android:background="#e4e4e4"
+                    android:textColorHint="#7f7f7f"
+                    android:textColor="#f05b33"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/ll_container"
+                android:layout_height="54dp"
+                android:layout_marginTop="0dp"
+                android:paddingRight="23dp" >
+
+                <TextView
+                    style="@style/textview2"
+                    android:textSize="16sp"
+                    android:textColor="#333232"
+                    android:layout_marginRight="10dp"
+                    android:text="目的地：" />
+
+                <Button
+                    android:id="@+id/btn_endsation"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:singleLine="true"
+                    android:ellipsize="middle"
+                    android:layout_weight="2.0"
+                    android:hint="选择目的地"
+                    android:background="#e4e4e4"
+                    android:textColorHint="#7f7f7f"
+                    android:textColor="#f05b33"
+                    android:textSize="16sp"  />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/ll_container"
+                android:layout_height="54dp"
+                android:layout_marginTop="0dp"
+                android:paddingRight="23dp" >
+
+                <TextView
+                    style="@style/textview2"
+                    android:textSize="16sp"
+                    android:textColor="#333232"
+                    android:layout_marginRight="10dp"
+                    android:text="车长/车型：" />
+
+                <Button
+                    android:id="@+id/publish_cx_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:onClick="publish_cx_btn"
+                    android:singleLine="true"
+                    android:ellipsize="middle"
+                    android:layout_weight="2.0"
+                    android:hint="选择车长车型"
+                    android:background="#e4e4e4"
+                    android:textColorHint="#7f7f7f"
+                    android:textColor="#f05b33"
+                    android:textSize="16sp"  />
+            </LinearLayout>
+
+
+            <!--<LinearLayout-->
+                <!--style="@style/ll_container"-->
+                <!--android:layout_height="54dp"-->
+                <!--android:layout_marginTop="0dp"-->
+                <!--android:paddingRight="23dp" >-->
+
+                <!--<TextView-->
+                    <!--style="@style/textview2"-->
+                    <!--android:textSize="16sp"-->
+                    <!--android:textColor="#333232"-->
+                    <!--android:layout_marginRight="10dp"-->
+                    <!--android:text="车长/车型：" />-->
+
+                <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="0dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_weight="2.0"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:orientation="horizontal" >&ndash;&gt;-->
+                    <!--&lt;!&ndash;<EditText-->
+                        <!--android:id="@+id/publish_cccx_et"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:focusable="false"-->
+                        <!--android:layout_height="35dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:hint="请选择车长车型"-->
+                        <!--android:singleLine="true"-->
+                        <!--android:textColor="#f05b33"-->
+                        <!--android:textColorHint="#c6c6c6"-->
+                        <!--android:textSize="16sp" />-->
+
+                    <!--<Button-->
+                        <!--android:id="@+id/"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="35dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:onClick="publish_cx_btn"-->
+                        <!--android:paddingLeft="20dp"-->
+                        <!--android:paddingRight="20dp"-->
+                        <!--android:singleLine="true"-->
+                        <!--android:text="车长车型"-->
+                        <!--android:background="#e4e4e4"-->
+                        <!--android:textColor="#424242"-->
+                        <!--android:textSize="@dimen/text_size_level4" />&ndash;&gt;-->
+
+                    <!--<Button-->
+                        <!--android:id="@+id/publish_cx_btn"-->
+                        <!--android:layout_height="35dp"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:singleLine="true"-->
+                        <!--android:ellipsize="middle"-->
+                        <!--android:hint="车长车型"-->
+                        <!--android:background="#e4e4e4"-->
+                        <!--android:textColorHint="#7f7f7f"-->
+                        <!--android:textColor="#f05b33"-->
+                        <!--android:textSize="@dimen/text_size_level4"  />-->
+                <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+            <!--</LinearLayout>-->
+
+            <LinearLayout
+                style="@style/ll_container"
+                android:layout_height="54dp"
+                android:layout_marginTop="0dp"
+                android:paddingRight="23dp" >
+
+                <TextView
+                    style="@style/textview2"
+                    android:textSize="16sp"
+                    android:textColor="#333232"
+                    android:layout_marginRight="10dp"
+                    android:text="重量/体积：" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.0"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/publish_zl_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="输入重量"
+                        android:singleLine="true"
+                        android:inputType="numberDecimal"
+                        android:digits="0123456789."
+                        android:maxLength="4"
+                        android:textColor="#f05b33"
+                        android:textColorHint="#c6c6c6"
+                        android:textSize="16sp"/>
+
+                    <Button
+                        android:id="@+id/publish_weightunit_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="publish_weightunit_btn"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:singleLine="true"
+                        android:text="吨"
+                        android:background="#e4e4e4"
+                        android:textColor="#434343"
+                        android:textSize="16sp"   />
+                    <!--
+                    <Spinner
+                        android:id="@+id/sp_publishsupply_weightunit"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.44"
+                        android:entries="@array/weightUnit"
+                        android:spinnerMode="dropdown" />
+                    -->
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/ll_container"
+                android:layout_height="54dp"
+                android:layout_marginTop="0dp"
+                android:paddingRight="23dp" >
+
+                <TextView
+                    style="@style/textview2"
+                    android:textSize="16sp"
+                    android:textColor="#333232"
+                    android:layout_marginRight="10dp"
+                    android:text="货物名称：" />
+
+                <!--  <EditText
+                     android:id="@+id/publish_hwmc_et"
+                     style="@style/edittext"
+                     android:hint="6个字以内"
+                     android:singleLine="true"
+                     android:maxLength="6"
+                     android:textColor="@color/deepblue"
+                     android:textColorHint="#CEDDED"
+                     android:textSize="14sp" />
+                  -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.0"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/publish_hwmc_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="6个字以内"
+                        android:singleLine="true"
+                        android:maxLength="6"
+                        android:textColor="#f05b33"
+                        android:textColorHint="#c6c6c6"
+                        android:textSize="16sp"/>
+
+                    <Button
+                        android:id="@+id/publish_huoelei_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="publish_huoelei_btn"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:singleLine="true"
+                        android:text="货类"
+                        android:background="#e4e4e4"
+                        android:textColor="#434343"
+                        android:textSize="16sp"  />
+                    <!--
+                    <Spinner
+                        android:id="@+id/sp_publishsupply_weightunit"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.44"
+                        android:entries="@array/weightUnit"
+                        android:spinnerMode="dropdown" />
+                    -->
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/huozhuxingming"
+                style="@style/ll_container"
+                android:layout_height="54dp"
+                android:layout_marginTop="0dp"
+                android:paddingRight="23dp" >
+
+                <TextView
+                    style="@style/textview2"
+                    android:textSize="16sp"
+                    android:textColor="#333232"
+                    android:layout_marginRight="10dp"
+                    android:text="货主姓名：" />
+
+                <EditText
+                    android:id="@+id/publish_et_name"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="2.0"
+                    android:singleLine="true"
+                    android:hint="输入姓名"
+                    android:maxLength="5"
+                    android:textColor="#f05b33"
+                    android:textColorHint="#c6c6c6"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lianxidianhua"
+                style="@style/ll_container"
+                android:layout_height="54dp"
+                android:layout_marginTop="0dp"
+                android:paddingRight="23dp" >
+
+                <TextView
+                    style="@style/textview2"
+                    android:textSize="16sp"
+                    android:textColor="#333232"
+                    android:layout_marginRight="10dp"
+                    android:text="联系电话：" />
+
+                <EditText
+                    android:id="@+id/publish_xldd_sp"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="2.0"
+                    android:hint="输入电话"
+                    android:maxLength="11"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:textColor="#f05b33"
+                    android:textColorHint="#c6c6c6"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/beizhu"
+                style="@style/ll_container"
+                android:layout_height="54dp"
+                android:layout_marginTop="0dp"
+                android:paddingRight="23dp" >
+
+                <TextView
+                    style="@style/textview2"
+                    android:textSize="16sp"
+                    android:textColor="#333232"
+                    android:layout_marginRight="10dp"
+                    android:text="备注：" />
+
+                <EditText
+                    android:id="@+id/publish_bz_et"
+                    style="@style/edittext"
+                    android:layout_height="35dp"
+                    android:hint="11个字以内"
+                    android:singleLine="true"
+                    android:maxLength="11"
+                    android:textColor="#f05b33"
+                    android:textColorHint="#c6c6c6"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_cfhy"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+                <TextView
+                    android:id="@+id/tv_cfhy"
+                    android:tag="0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/dagou_nor"
+                    android:drawablePadding="4dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="16sp"
+                    android:text="保存为常发货源"/>
+            </RelativeLayout>
+
+
+            <Button
+                android:id="@+id/publish_commit"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/material_button_blue"
+                android:text="@string/send_good"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

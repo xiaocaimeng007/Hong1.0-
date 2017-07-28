@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFFFF"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/default_title_bg"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/base_color"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <include layout="@layout/include_rightback"/>
+
+        <TextView
+            android:id="@+id/midTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="鸿运天下承运条款"
+            android:textColor="@color/white"
+            android:textSize="@dimen/h3" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_marginTop="35dp"
+        android:textSize="16sp"
+        android:text="    一.此电子协议经双方确认后生效,并具备法律效力,一旦发现货损,货却短少和出现其他意外事故或出现其他意外事故或不按指定时间,地点交货,由车主承担责任,并全额赔偿损失,如遇不可抗拒自然灾害及其他天灾除外；"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textSize="16sp"
+        android:text="    	二.承运车方务必对所装货物清点无误；"/>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textSize="16sp"
+        android:text="    	三.在运输途中,在议定吨位内如遇超吨,超宽,超高罚款,扣货等情况由双方协商解决；"/>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textSize="16sp"
+        android:text="    四.运输途中受阻,务必电话通知托运单位,收货单位；"/>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textSize="16sp"
+        android:text="    五.以上条款双方均有电子协议确认后生效,双方应严格遵守,违反合同者承担一切经济损失和法律责任."/>
+
+</LinearLayout>

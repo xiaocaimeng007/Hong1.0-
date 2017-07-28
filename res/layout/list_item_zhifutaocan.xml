@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/itemblock"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF">
+
+    <RadioButton
+        android:id="@+id/rb_taocan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:enabled="false"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/tv_taocan"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_toRightOf="@+id/iv_profile_hz"
+        tools:text="V2016002一年VIP套餐380元"
+        android:textColor="#787878"
+        android:textSize="16sp" />
+
+</LinearLayout>

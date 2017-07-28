@@ -1,0 +1,28 @@
+//设置脚本的运行环境
+buildscript {
+    repositories {//支持java 依赖库管理（maven/ivy）,用于项目的依赖。这也是gradle 强力的地方
+        jcenter()//声明仓库的源 是一个新的中央远程仓库，兼容maven中心仓库，而且性能更优
+    }
+//    依赖包的定义。支持maven/ivy，远程，本地库，也支持单文件，
+//    如果前面定义了repositories{}maven 库，使用maven的依赖（我没接触过ivy。。）
+//    的时候只需要按照用类似于com.android.tools.build:gradle:0.4，gradle
+//    就会自动的往远程库下载相应的依赖
+    dependencies {
+//        声明了android gradle plugin的版本
+        classpath 'com.android.tools.build:gradle:2.3.3'
+
+        classpath 'me.tatarka:gradle-retrolambda:3.2.0'
+        classpath 'me.tatarka.retrolambda.projectlombok:lombok.ast:0.2.3.a2'
+    }
+    configurations.classpath.exclude group: 'com.android.tools.external.lombok'
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

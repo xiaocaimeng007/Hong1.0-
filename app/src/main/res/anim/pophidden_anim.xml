@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android" >
+<!--伸缩动画
+fillAfter="false" 不保存结束状态
+android:pivotX="50%"   
+android:pivotY="0%" 伸缩中心为左中间
+accelerate_interpolator加速动画插入器
+android:fromXScale="1.0" 开始横坐标的伸缩比例
+android:fromYScale="1.0" 开始纵坐标的伸缩比例
+android:toXScale="1.0" 结束横坐标的伸缩比例
+android:toYScale="0.0" 结束纵坐标的伸缩比例
+以上四种属性值：0.0表示收缩没有 1.0表示正常无伸缩 大于1表示放大 小于1表示收缩
+  -->
+    <scale
+        android:duration="100"
+        android:fillAfter="false"
+        android:fromXScale="1.0"
+        android:fromYScale="1.0"
+        android:interpolator="@android:anim/accelerate_interpolator"
+        android:pivotX="50%"
+        android:pivotY="0%"
+        android:toXScale="1.0"
+        android:toYScale="0.0" >
+    </scale>
+
+</set>
