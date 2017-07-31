@@ -31,7 +31,6 @@ import com.amap.api.location.AMapLocation;
 import com.amap.api.location.AMapLocationClient;
 import com.amap.api.location.AMapLocationClientOption;
 import com.amap.api.location.AMapLocationListener;
-import com.amap.api.maps2d.LocationSource;
 import com.hongbao5656.R;
 import com.hongbao5656.base.App;
 import com.hongbao5656.base.BaseActivity;
@@ -55,7 +54,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 
 public class RegisterActivity extends BaseActivity implements
-        OnClickListener, HttpDataHandlerListener, OnTimeFinshListener, AMapLocationListener, LocationSource {
+        OnClickListener, HttpDataHandlerListener, OnTimeFinshListener, AMapLocationListener {
     private Button btn_register;
     private Button btn_getyzm;
     private EditText et_phone_number;
@@ -355,13 +354,7 @@ public class RegisterActivity extends BaseActivity implements
         mlocationClient.startLocation();
     }
 
-    @Override
-    public void activate(LocationSource.OnLocationChangedListener arg0) {
-    }
 
-    @Override
-    public void deactivate() {
-    }
 
     private String city = "";
 

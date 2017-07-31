@@ -14,7 +14,8 @@ import com.amap.api.location.AMapLocation;
 import com.amap.api.location.AMapLocationClient;
 import com.amap.api.location.AMapLocationClientOption;
 import com.amap.api.location.AMapLocationListener;
-import com.amap.api.maps2d.LocationSource;
+import com.amap.api.maps.LocationSource;
+
 import com.example.aaron.library.MLog;
 import com.hongbao5656.base.App;
 import com.hongbao5656.base.BaseService;
@@ -56,7 +57,7 @@ public class LocationServiceForGaoDe
     //声明AMapLocationClientOption对象，定位参数
     private AMapLocationClientOption mLocationOption;
     //声明OnLocationChangedListener对象，定位监听器
-    private OnLocationChangedListener mLocationChangedListener = null;
+    private LocationSource.OnLocationChangedListener mLocationChangedListener = null;
     //标识，用于判断是否只显示一次定位信息和用户重新定位
     private boolean isFirstLoc = true;
 

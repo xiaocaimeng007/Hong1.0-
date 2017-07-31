@@ -640,7 +640,6 @@ public class MainActivity
     @Override
     protected void onStop() {
         super.onStop();
-//        MLog.d("MainActivity-onStop");
     }
 
     @Override

@@ -4,6 +4,16 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.graphics.Color;
 
+import com.amap.api.maps.AMap;
+import com.amap.api.maps.CameraUpdateFactory;
+import com.amap.api.maps.LocationSource;
+import com.amap.api.maps.MapView;
+import com.amap.api.maps.model.BitmapDescriptorFactory;
+import com.amap.api.maps.model.LatLng;
+import com.amap.api.maps.model.Marker;
+import com.amap.api.maps.model.MarkerOptions;
+import com.amap.api.maps.model.MyLocationStyle;
+import com.amap.api.maps.model.PolylineOptions;
 import com.example.aaron.library.MLog;
 
 import android.graphics.drawable.BitmapDrawable;
@@ -25,16 +35,6 @@ import com.amap.api.location.AMapLocation;
 import com.amap.api.location.AMapLocationClient;
 import com.amap.api.location.AMapLocationClientOption;
 import com.amap.api.location.AMapLocationListener;
-import com.amap.api.maps2d.AMap;
-import com.amap.api.maps2d.CameraUpdateFactory;
-import com.amap.api.maps2d.LocationSource;
-import com.amap.api.maps2d.MapView;
-import com.amap.api.maps2d.model.BitmapDescriptorFactory;
-import com.amap.api.maps2d.model.LatLng;
-import com.amap.api.maps2d.model.Marker;
-import com.amap.api.maps2d.model.MarkerOptions;
-import com.amap.api.maps2d.model.MyLocationStyle;
-import com.amap.api.maps2d.model.PolylineOptions;
 import com.amap.api.services.core.LatLonPoint;
 import com.amap.api.services.geocoder.GeocodeAddress;
 import com.amap.api.services.geocoder.GeocodeResult;
@@ -47,7 +47,6 @@ import com.amap.api.services.route.RouteSearch;
 import com.amap.api.services.route.WalkRouteResult;
 import com.hongbao5656.R;
 import com.hongbao5656.amap.AMapUtil;
-import com.hongbao5656.base.App;
 import com.hongbao5656.base.BaseActivity;
 import com.hongbao5656.okhttp.HttpException;
 import com.hongbao5656.util.Constants;
@@ -70,7 +69,9 @@ import java.util.Calendar;
 import java.util.LinkedHashMap;
 import java.util.List;
 
-public class TZDWeiActivity extends BaseActivity implements HttpDataHandlerListener, LocationSource,
+import static com.hongbao5656.amap.AMapUtil.convertToLatLng;
+
+public class TZDWeiActivity extends BaseActivity implements HttpDataHandlerListener,
         AMapLocationListener, GeocodeSearch.OnGeocodeSearchListener {
     private Context mContext;
     private RouteSearch mRouteSearch;
@@ -98,14 +99,10 @@ public class TZDWeiActivity extends BaseActivity implements HttpDataHandlerListe
     private EditText et_tel;
     private TextView tv_location;
     private TextView tv_location_time;
-    private AMap aMap;
-    private MapView mapView;
-    private OnLocationChangedListener mListener;
     private AMapLocationClient mlocationClient;
     private AMapLocationClientOption mLocationOption;
     private AMapLocation locaton;
     private GeocodeSearch geocoderSearch;
-    private Marker regeoMarker;
     private RelativeLayout leftBt;
     private String lasttime;
     private LinearLayout rl_super;
@@ -121,6 +118,11 @@ public class TZDWeiActivity extends BaseActivity implements HttpDataHandlerListe
     //整体布局
     private LinearLayout container;
     private Calendar calendar;
+    private AMap aMap;
+    private MapView mapView;
+    private Marker regeoMarker;
+    private LocationSource.OnLocationChangedListener mListener;
+    private LatLng latLng;
 
     @Override
     protected void onCreate(Bundle bundle) {
@@ -355,9 +357,10 @@ public class TZDWeiActivity extends BaseActivity implements HttpDataHandlerListe
             if (result != null && result.getRegeocodeAddress() != null
                     && result.getRegeocodeAddress().getFormatAddress() != null) {
                 addressName = result.getRegeocodeAddress().getFormatAddress() + "附近";
+                LatLng latLng1 = AMapUtil.convertToLatLng(latLonPoint);
                 aMap.animateCamera(CameraUpdateFactory.newLatLngZoom(
-                        AMapUtil.convertToLatLng(latLonPoint), 15));
-                regeoMarker.setPosition(AMapUtil.convertToLatLng(latLonPoint));
+                        latLng, 15));
+                regeoMarker.setPosition(convertToLatLng(latLonPoint));
                 tv_location.setText(addressName);
                 tv_location_time.setText(lasttime);
                 TU.show(TZDWeiActivity.this, addressName);
@@ -382,8 +385,8 @@ public class TZDWeiActivity extends BaseActivity implements HttpDataHandlerListe
                     && result.getGeocodeAddressList().size() > 0) {
                 GeocodeAddress address = result.getGeocodeAddressList().get(0);
                 aMap.animateCamera(CameraUpdateFactory.newLatLngZoom(
-                        AMapUtil.convertToLatLng(address.getLatLonPoint()), 15));
-                geoMarker.setPosition(AMapUtil.convertToLatLng(address.getLatLonPoint()));
+                        convertToLatLng(address.getLatLonPoint()), 15));
+                geoMarker.setPosition(convertToLatLng(address.getLatLonPoint()));
                 addressName = "经纬度值:" + address.getLatLonPoint() + "\n位置描述:"
                         + address.getFormatAddress();
                 TU.show(TZDWeiActivity.this, addressName);
@@ -409,7 +412,7 @@ public class TZDWeiActivity extends BaseActivity implements HttpDataHandlerListe
         // myLocationStyle.anchor(int,int)//设置小蓝点的锚点
         myLocationStyle.strokeWidth(1.0f);// 设置圆形的边框粗细
         aMap.setMyLocationStyle(myLocationStyle);
-        aMap.setLocationSource(this);// 设置定位监听
+//        aMap.setLocationSource( new LocationSource(this));// 设置定位监听
         aMap.getUiSettings().setMyLocationButtonEnabled(true);// 设置默认定位按钮是否显示
         aMap.setMyLocationEnabled(true);// 设置为true表示显示定位层并可触发定位，false表示隐藏定位层并不可触发定位，默认是false
         // aMap.setMyLocationType()
@@ -418,8 +421,8 @@ public class TZDWeiActivity extends BaseActivity implements HttpDataHandlerListe
     /**
      * 激活定位
      */
-    @Override
-    public void activate(OnLocationChangedListener listener) {
+    //@Override
+    public void activate(LocationSource.OnLocationChangedListener listener) {
         mListener = listener;
         if (mlocationClient == null) {
             mlocationClient = new AMapLocationClient(this);
@@ -443,7 +446,6 @@ public class TZDWeiActivity extends BaseActivity implements HttpDataHandlerListe
     /**
      * 停止定位
      */
-    @Override
     public void deactivate() {
         mListener = null;
         if (mlocationClient != null) {

@@ -1,3 +1,3 @@
-include ':app'
+include ':app', ':yl_lib'
 
 //这个文件是全局的项目配置文件，里面主要声明一些需要加入gradle的module

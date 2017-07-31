@@ -13,21 +13,15 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.amap.api.maps2d.AMap;
-import com.amap.api.maps2d.AMap.InfoWindowAdapter;
-import com.amap.api.maps2d.AMap.OnInfoWindowClickListener;
-import com.amap.api.maps2d.AMap.OnMapClickListener;
-import com.amap.api.maps2d.AMap.OnMarkerClickListener;
-import com.amap.api.maps2d.MapView;
-import com.amap.api.maps2d.model.BitmapDescriptorFactory;
-import com.amap.api.maps2d.model.LatLng;
-import com.amap.api.maps2d.model.Marker;
-import com.amap.api.maps2d.model.MarkerOptions;
-import com.amap.api.maps2d.overlay.DrivingRouteOverlay;
+import com.amap.api.maps.AMap;
+import com.amap.api.maps.MapView;
+import com.amap.api.maps.model.LatLng;
+import com.amap.api.maps.model.Marker;
 import com.amap.api.services.core.LatLonPoint;
 import com.amap.api.services.route.BusRouteResult;
 import com.amap.api.services.route.DrivePath;
 import com.amap.api.services.route.DriveRouteResult;
+import com.amap.api.services.route.RideRouteResult;
 import com.amap.api.services.route.RouteSearch;
 import com.amap.api.services.route.RouteSearch.BusRouteQuery;
 import com.amap.api.services.route.RouteSearch.DriveRouteQuery;
@@ -38,10 +32,7 @@ import com.hongbao5656.R;
 import com.hongbao5656.amap.AMapUtil;
 import com.hongbao5656.util.TU;
 
-public class MapDetailActivity extends Activity implements OnMapClickListener,
-		OnMarkerClickListener, OnInfoWindowClickListener, InfoWindowAdapter, OnRouteSearchListener {
-	private AMap aMap;
-	private MapView mapView;
+public class MapDetailActivity extends Activity implements  OnRouteSearchListener, AMap.OnMapClickListener, AMap.OnInfoWindowClickListener, AMap.InfoWindowAdapter, AMap.OnMarkerClickListener {
 	private Context mContext;
 	private RouteSearch mRouteSearch;
 	private DriveRouteResult mDriveRouteResult;
@@ -69,6 +60,9 @@ public class MapDetailActivity extends Activity implements OnMapClickListener,
 	private double mlong1;
 	private double lat2;
 	private double mlong2;
+	private MapView mapView;
+	private AMap aMap;
+
 	@Override
 	protected void onCreate(Bundle bundle) {
 		super.onCreate(bundle);
@@ -86,17 +80,17 @@ public class MapDetailActivity extends Activity implements OnMapClickListener,
 		mapView = (MapView) findViewById(R.id.map);
 		mapView.onCreate(bundle);// 此方法必须重写
 		init();
-		setfromandtoMarker();
+		//setfromandtoMarker();
 	}
 
-	private void setfromandtoMarker() {
+	/*private void setfromandtoMarker() {
 		aMap.addMarker(new MarkerOptions()
 				.position(AMapUtil.convertToLatLng(mStartPoint))
 				.icon(BitmapDescriptorFactory.fromResource(R.drawable.start)));
 		aMap.addMarker(new MarkerOptions()
 				.position(AMapUtil.convertToLatLng(mEndPoint))
 				.icon(BitmapDescriptorFactory.fromResource(R.drawable.end)));
-	}
+	}*/
 
 	/**
 	 * 初始化AMap对象
@@ -135,25 +129,16 @@ public class MapDetailActivity extends Activity implements OnMapClickListener,
 		aMap.setInfoWindowAdapter(MapDetailActivity.this);
 	}
 
-	@Override
+    @Override
+    public View getInfoWindow(Marker marker) {
+        return null;
+    }
+
+    @Override
 	public View getInfoContents(Marker arg0) {
 		return null;
 	}
 
-	@Override
-	public View getInfoWindow(Marker arg0) {
-		return null;
-	}
-
-	@Override
-	public void onInfoWindowClick(Marker arg0) {
-
-	}
-
-	@Override
-	public boolean onMarkerClick(Marker arg0) {
-		return false;
-	}
 
 	@Override
 	public void onMapClick(LatLng arg0) {
@@ -219,13 +204,13 @@ public class MapDetailActivity extends Activity implements OnMapClickListener,
 					mDriveRouteResult = result;
 					final DrivePath drivePath = mDriveRouteResult.getPaths()
 							.get(0);
-					DrivingRouteOverlay drivingRouteOverlay = new DrivingRouteOverlay(
+					/*DrivingRouteOverlay drivingRouteOverlay = new DrivingRouteOverlay(
 							this, aMap, drivePath,
 							mDriveRouteResult.getStartPos(),
 							mDriveRouteResult.getTargetPos());
 					drivingRouteOverlay.removeFromMap();
 					drivingRouteOverlay.addToMap();
-					drivingRouteOverlay.zoomToSpan();
+					drivingRouteOverlay.zoomToSpan();*/
 					mBottomLayout.setVisibility(View.VISIBLE);
 					int dis = (int) drivePath.getDistance();//1409694
 					int dur = (int) drivePath.getDuration();
@@ -246,6 +231,7 @@ public class MapDetailActivity extends Activity implements OnMapClickListener,
 				} else if (result != null && result.getPaths() == null) {
 					TU.show(mContext, R.string.no_result);
 				}
+
 
 			} else {
 				TU.show(mContext, R.string.no_result);
@@ -301,6 +287,11 @@ public class MapDetailActivity extends Activity implements OnMapClickListener,
 //		} else {
 //			ToastUtil.showerror(this.getApplicationContext(), errorCode);
 //		}
+	}
+
+	@Override
+	public void onRideRouteSearched(RideRouteResult rideRouteResult, int i) {
+
 	}
 
 
@@ -362,4 +353,13 @@ public class MapDetailActivity extends Activity implements OnMapClickListener,
 		mapView.onDestroy();
 	}
 
+    @Override
+    public void onInfoWindowClick(Marker marker) {
+
+    }
+
+    @Override
+    public boolean onMarkerClick(Marker marker) {
+        return false;
+    }
 }

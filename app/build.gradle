@@ -66,6 +66,7 @@ android {
         main {
             java.srcDirs = ['src/main/java']//指定source目录
             jniLibs.srcDirs = ['libs']//指定lib库目录
+
 //            manifest.srcFile 'src/main/AndroidManifest.xml'//指定AndroidManifest文件
 //            resources.srcDirs = ['src/main/resources']
 //            aidl.srcDirs = ['src/main/aidl']
@@ -116,6 +117,7 @@ android {
 
     buildTypes {//build类型
 
+
         debug {//调试模式
             // 显示Log
             buildConfigField "boolean", "LOG_DEBUG", "true"
@@ -161,6 +163,19 @@ android {
             }
         }
     }
+    /*packagingOptions {
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+    }*/
 }
 
 def releaseTime() {
@@ -168,8 +183,11 @@ def releaseTime() {
 //    return new Date().format("yyyy-MM-dd-HH-mm-ss", TimeZone.getTimeZone("UTC"))
 }
 
-dependencies {//需要用到的第三方库
-    compile fileTree(dir: 'libs', include: ['*.jar'])//编译lib目录下的.jar文件
+dependencies {
+    //需要用到的第三方库
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    //编译lib目录下的.jar文件。
+    //compile fileTree(include: ['*.jar'], dir: 'libs')
     //编译来自Jcenter的第三方开源库
     //突破65535分包用的
     //    compile 'com.android.support:appcompat-v7:22.2.1'
@@ -187,5 +205,5 @@ dependencies {//需要用到的第三方库
     debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
     releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
     testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
-
+    compile project(':yl_lib')
 }

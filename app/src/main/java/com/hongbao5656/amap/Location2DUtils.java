@@ -9,10 +9,10 @@ import com.amap.api.location.AMapLocationClient;
 import com.amap.api.location.AMapLocationClientOption;
 import com.amap.api.location.AMapLocationClientOption.AMapLocationMode;
 import com.amap.api.location.AMapLocationListener;
-import com.amap.api.maps2d.AMap;
-import com.amap.api.maps2d.LocationSource;
-import com.amap.api.maps2d.model.BitmapDescriptorFactory;
-import com.amap.api.maps2d.model.MyLocationStyle;
+import com.amap.api.maps.AMap;
+import com.amap.api.maps.LocationSource;
+import com.amap.api.maps.model.BitmapDescriptorFactory;
+import com.amap.api.maps.model.MyLocationStyle;
 import com.hongbao5656.R;
 
 /**
@@ -35,7 +35,7 @@ public class Location2DUtils implements AMapLocationListener, LocationSource {
 	/**
 	 * LocationSource.OnLocationChangedListener
 	 */
-	private OnLocationChangedListener mListener;
+	private LocationSource.OnLocationChangedListener mListener;
 	/**
 	 * 自定义的位置更新成功接口
 	 */
@@ -162,7 +162,7 @@ public class Location2DUtils implements AMapLocationListener, LocationSource {
 	 * 激活定位
 	 */
 	@Override
-	public void activate(OnLocationChangedListener arg0) {
+	public void activate(LocationSource.OnLocationChangedListener arg0) {
 		mListener = arg0;
 		startLocation();
 	}
