@@ -145,7 +145,45 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/devider_line" />
+    <LinearLayout
+        android:id="@+id/ll_yinlian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
 
+        <RadioButton
+            android:id="@+id/rb_yinlian"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:id="@+id/rl_yinlian"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:id="@+id/iv_yinlian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="11dp"
+                android:src="@drawable/union" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iv_yinlian"
+                android:text="银联"
+                android:textColor="#787878"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </LinearLayout>
     <Button
         android:id="@+id/queding"
         android:layout_width="match_parent"
