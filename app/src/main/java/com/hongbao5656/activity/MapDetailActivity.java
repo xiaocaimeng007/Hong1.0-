@@ -86,10 +86,10 @@ public class MapDetailActivity extends Activity implements  OnRouteSearchListene
 	/*private void setfromandtoMarker() {
 		aMap.addMarker(new MarkerOptions()
 				.position(AMapUtil.convertToLatLng(mStartPoint))
-				.icon(BitmapDescriptorFactory.fromResource(R.drawable.start)));
+				.union(BitmapDescriptorFactory.fromResource(R.drawable.start)));
 		aMap.addMarker(new MarkerOptions()
 				.position(AMapUtil.convertToLatLng(mEndPoint))
-				.icon(BitmapDescriptorFactory.fromResource(R.drawable.end)));
+				.union(BitmapDescriptorFactory.fromResource(R.drawable.end)));
 	}*/
 
 	/**

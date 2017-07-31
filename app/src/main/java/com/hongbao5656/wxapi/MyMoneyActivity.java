@@ -67,6 +67,8 @@ public class MyMoneyActivity
     private LinearLayout ll_zhifubao;
     private LinearLayout ll_weixin;
     private IWXAPI api;
+    private LinearLayout ll_yinlian;
+    private RadioButton rb_yinlian;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -109,11 +111,13 @@ public class MyMoneyActivity
         //ll支付宝
         ll_zhifubao = (LinearLayout)view_zhifu.findViewById(R.id.ll_zhifubao);
         ll_weixin = (LinearLayout)view_zhifu.findViewById(R.id.ll_weixin);
+        ll_yinlian = (LinearLayout)view_zhifu.findViewById(R.id.ll_yinlian);
 
         //rb支付宝
         rb_zhifubao= (RadioButton)view_zhifu.findViewById(R.id.rb_zhifubao);
         //rb微信
         rb_weixin= (RadioButton)view_zhifu.findViewById(R.id.rb_weixin);
+        rb_yinlian = (RadioButton)view_zhifu.findViewById(R.id.rb_yinlian);
 
         rb_zhifubao.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -131,12 +135,21 @@ public class MyMoneyActivity
                 }
             }
         });
+        rb_yinlian.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    rb_yinlian.setChecked(false);
+                }
+            }
+        });
 
         ll_zhifubao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 rb_zhifubao.setChecked(true);
                 rb_weixin.setChecked(false);
+//                rb_yi
             }
         });
 

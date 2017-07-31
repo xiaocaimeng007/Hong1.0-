@@ -132,7 +132,7 @@ public class TZDWeiActivity extends BaseActivity implements HttpDataHandlerListe
         setView();
         setListener();
         mapView = (MapView) findViewById(R.id.map);
-        mapView.onCreate(bundle);// 此方法必须重写
+        mapView.onCreate(bundle);// 此方法必须重写zhongdingwei
         init();
         setInputUI(findViewById(R.id.rl_super), this);
     }

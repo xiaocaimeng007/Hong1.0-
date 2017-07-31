@@ -733,8 +733,8 @@ public class MainActivity
 
 
         //API 11 以前的用法
-//        Notification notification = new Notification(icon,content,System.currentTimeMillis());
-//        Notification notification = new Notification(icon, "鸿宝天下", si.lastupdate);
+//        Notification notification = new Notification(union,content,System.currentTimeMillis());
+//        Notification notification = new Notification(union, "鸿宝天下", si.lastupdate);
 
         //API 11 以后的用法
 //        Notification.Builder builder = new Notification.Builder(this);
@@ -763,7 +763,7 @@ public class MainActivity
         //设置大视图样式
 
 //        NotificationCompat.Builder nc = new NotificationCompat.Builder(this);
-//        nc.setSmallIcon(icon);//设置小图标
+//        nc.setSmallIcon(union);//设置小图标
 //        nc.setContentTitle("鸿运天下");//标题
 //        nc.setContentText(content);//内容
 
@@ -785,7 +785,7 @@ public class MainActivity
 
         //进度通知
 //        final NotificationCompat.Builder builder = new NotificationCompat.Builder(this);
-//        builder.setSmallIcon(icon);
+//        builder.setSmallIcon(union);
 //        builder.setContentText("新版本正在更新中...");
 //        builder.setContentTitle("鸿运天下");
 //        builder.setProgress(100,0,false);
@@ -826,7 +826,7 @@ public class MainActivity
 //        builder.setContent(rv);
 //        builder.setOngoing(true);//设置常驻通知
 //        builder.setTicker("鸿宝音乐");
-//        builder.setSmallIcon(icon);
+//        builder.setSmallIcon(union);
 //        NotificationManager nm = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 //        nm.notify(33,builder.build());
 
