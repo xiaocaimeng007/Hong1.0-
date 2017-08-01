@@ -338,7 +338,7 @@ public class ParamsService {
     }
 
     /**
-     * 银联支付
+     * 支付宝支付
      */
     public String alipay(
             String ProductID
@@ -354,10 +354,10 @@ public class ParamsService {
 //        data1.put("notify_url", notify_url);
 //        data1.put("trade_type", "APP");
         data1.put("ProductID", ProductID);
-        return getParamsJsonString(data1, Constants.unionpay);
+        return getParamsJsonString(data1, Constants.alipay);
     }
     /**
-     * 支付宝支付
+     * 银联支付
      */
     public String unionpay(
             String ProductID
@@ -373,7 +373,7 @@ public class ParamsService {
 //        data1.put("notify_url", notify_url);
 //        data1.put("trade_type", "APP");
         data1.put("ProductID", ProductID);
-        return getParamsJsonString(data1, Constants.alipay);
+        return getParamsJsonString(data1, Constants.unionpay);
     }
 
     /**

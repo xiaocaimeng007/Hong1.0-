@@ -269,53 +269,57 @@ public class MyMoneyActivity
             // 必须异步调用
             Thread payThread = new Thread(payRunnable);
             payThread.start();
-        } else if (connectionId == com.hongbao5656.util.Constants.online_3g) {
-            datas_3gonlin = IMap.getData2FromResponse(iParams, VO.class);
-            if (datas_3gonlin != null) {
-                int size = datas_3gonlin.size();
-                if (size > 0) {
-                    if (pw_zhifu != null && pw_zhifu.isShowing()) {
-                        pw_zhifu.dismiss();
-                        return;
-                    }
-                    ArrayList<String> list = new ArrayList<>();
-                    for (int i = 0; i < size; i++) {
-                        VO vo = datas_3gonlin.get(i);
-                        String price = String.valueOf(vo.price);
-                        if(price.endsWith(".0")){
-                            price = price.substring(0,price.length()-2);
+        } else if (connectionId == com.hongbao5656.util.Constants.unionpay) {//银联支付
+            UPPayAssistEx.startPay(MyMoneyActivity.this, null, null, tn, mode);
+        } else {
+            if (connectionId == com.hongbao5656.util.Constants.online_3g) {
+                datas_3gonlin = IMap.getData2FromResponse(iParams, VO.class);
+                if (datas_3gonlin != null) {
+                    int size = datas_3gonlin.size();
+                    if (size > 0) {
+                        if (pw_zhifu != null && pw_zhifu.isShowing()) {
+                            pw_zhifu.dismiss();
+                            return;
                         }
-                        list.add(vo.id+vo.description + price + "元");
-                    }
+                        ArrayList<String> list = new ArrayList<>();
+                        for (int i = 0; i < size; i++) {
+                            VO vo = datas_3gonlin.get(i);
+                            String price = String.valueOf(vo.price);
+                            if (price.endsWith(".0")) {
+                                price = price.substring(0, price.length() - 2);
+                            }
+                            list.add(vo.id + vo.description + price + "元");
+                        }
 //                    list.add("V2016006一年VIP套餐380元");
 //                    list.add("V2016007二年VIP套餐580元");
 //                    list.add("V2016008二年VIP套餐580元");
 //                    list.add("V2016002二年VIP套餐580元");
-                    if (mTaoCanAdapter == null) {
-                        mTaoCanAdapter = new TaoCanAdapter(MyMoneyActivity.this, list);
-                        lv_ppw_taocan.setAdapter(mTaoCanAdapter);
-                    } else {
-                        mTaoCanAdapter.clearListView();
-                        mTaoCanAdapter.upateList(list);
+                        if (mTaoCanAdapter == null) {
+                            mTaoCanAdapter = new TaoCanAdapter(MyMoneyActivity.this, list);
+                            lv_ppw_taocan.setAdapter(mTaoCanAdapter);
+                        } else {
+                            mTaoCanAdapter.clearListView();
+                            mTaoCanAdapter.upateList(list);
+                        }
+                        pw_zhifu.setAnimationStyle(R.style.PopupWindowAnimation);
+                        pw_zhifu.setOutsideTouchable(false);
+                        pw_zhifu.setFocusable(false);
+                        pw_zhifu.setBackgroundDrawable(getResources().getDrawable(R.color.base_top_bg_color));
+                        pw_zhifu.showAsDropDown(findViewById(R.id.default_title_bg), 0, 0);
                     }
-                    pw_zhifu.setAnimationStyle(R.style.PopupWindowAnimation);
-                    pw_zhifu.setOutsideTouchable(false);
-                    pw_zhifu.setFocusable(false);
-                    pw_zhifu.setBackgroundDrawable(getResources().getDrawable(R.color.base_top_bg_color));
-                    pw_zhifu.showAsDropDown(findViewById(R.id.default_title_bg), 0, 0);
                 }
-            }
-        } else if (connectionId == com.hongbao5656.util.Constants.online_3g_trading_endtime) {
-            datas_3gonlin = IMap.getData2FromResponse(iParams, VO.class);
-            if (datas_3gonlin != null) {
-                int size = datas_3gonlin.size();
-                if (size > 0) {
-                    String time = TimeUtils.getSureTime2("yyyy-MM-dd HH:mm:ss", datas_3gonlin.get(0).useexpiredate);
-                    if (!SU.isEmpty(time)) {
-                        text_online_time.setText(time + " 到期");
+            } else if (connectionId == com.hongbao5656.util.Constants.online_3g_trading_endtime) {
+                datas_3gonlin = IMap.getData2FromResponse(iParams, VO.class);
+                if (datas_3gonlin != null) {
+                    int size = datas_3gonlin.size();
+                    if (size > 0) {
+                        String time = TimeUtils.getSureTime2("yyyy-MM-dd HH:mm:ss", datas_3gonlin.get(0).useexpiredate);
+                        if (!SU.isEmpty(time)) {
+                            text_online_time.setText(time + " 到期");
+                        }
+                    } else {
+                        text_online_time.setText("");
                     }
-                } else {
-                    text_online_time.setText("");
                 }
             }
         }
