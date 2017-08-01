@@ -42,6 +42,8 @@ import com.tencent.mm.sdk.modelpay.PayReq;
 import com.tencent.mm.sdk.openapi.IWXAPI;
 import com.tencent.mm.sdk.openapi.IWXAPIEventHandler;
 import com.tencent.mm.sdk.openapi.WXAPIFactory;
+import com.unionpay.UPPayAssistEx;
+
 import net.sourceforge.simcpux.Constants;
 import org.json.JSONException;
 import java.util.ArrayList;
@@ -117,6 +119,7 @@ public class MyMoneyActivity
         rb_zhifubao= (RadioButton)view_zhifu.findViewById(R.id.rb_zhifubao);
         //rb微信
         rb_weixin= (RadioButton)view_zhifu.findViewById(R.id.rb_weixin);
+        //rb银联支付
         rb_yinlian = (RadioButton)view_zhifu.findViewById(R.id.rb_yinlian);
 
         rb_zhifubao.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -124,6 +127,7 @@ public class MyMoneyActivity
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
                     rb_weixin.setChecked(false);
+                    rb_yinlian.setChecked(false);
                 }
             }
         });
@@ -132,6 +136,7 @@ public class MyMoneyActivity
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
                     rb_zhifubao.setChecked(false);
+                    rb_yinlian.setChecked(false);
                 }
             }
         });
@@ -139,7 +144,8 @@ public class MyMoneyActivity
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
-                    rb_yinlian.setChecked(false);
+                    rb_zhifubao.setChecked(false);
+                    rb_weixin.setChecked(false);
                 }
             }
         });
@@ -149,15 +155,24 @@ public class MyMoneyActivity
             public void onClick(View v) {
                 rb_zhifubao.setChecked(true);
                 rb_weixin.setChecked(false);
-//                rb_yi
+                rb_yinlian.setChecked(false);
             }
         });
 
         ll_weixin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                rb_zhifubao.setChecked(false);
                 rb_weixin.setChecked(true);
+                rb_zhifubao.setChecked(false);
+                rb_yinlian.setChecked(false);
+            }
+        });
+        ll_yinlian.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                rb_yinlian.setChecked(true);
+                rb_zhifubao.setChecked(false);
+                rb_weixin.setChecked(false);
             }
         });
 
@@ -181,6 +196,8 @@ public class MyMoneyActivity
                     alipayrequest(taocan.substring(0,8));
                 }else if(rb_weixin.isChecked()){
                     wxpayrequest(taocan.substring(0,8));
+                }else if (rb_yinlian.isChecked()){
+                    unionpayrequest(taocan.substring(0,8));
                 }
                 if (pw_zhifu != null && pw_zhifu.isShowing()) {
                     pw_zhifu.dismiss();
@@ -213,8 +230,7 @@ public class MyMoneyActivity
         sendPostRequest(
                 com.hongbao5656.util.Constants.online_3g_trading_endtime,
                 new ParamsService().request(com.hongbao5656.util.Constants.online_3g_trading_endtime),
-                this,
-                false);
+                this, false);
     }
 
     @Override
@@ -428,6 +444,11 @@ public class MyMoneyActivity
         } else {
             TU.show(this, "当前微信版本不支持支付，请升级后再试！");
         }
+    }
+    private void unionpayrequest(String id){//银联请求本地服务器
+        sendPostRequest(
+                com.hongbao5656.util.Constants.unionpay,
+                new ParamsService().unionpay(id), MyMoneyActivity.this, false);
     }
 
 

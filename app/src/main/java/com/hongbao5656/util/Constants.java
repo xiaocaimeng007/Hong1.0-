@@ -28,6 +28,7 @@ public class Constants {
     public static final int deleteemptycar = 30322;
     public static final int wxpay = 4001;
     public static final int alipay = 4002;
+    public static final int unionpay = 4003;
     public static final int detailsupply = 30110;//货源详情
     public static final int detailsupplyBaoJia = 30114;//货源详情-报价
     public static final int detailcar = 10023;//车源详情

@@ -355,7 +355,7 @@
             android:layout_centerVertical="true"
             android:layout_toRightOf="@+id/text_online"
             android:layout_marginLeft="20dp"
-            tools:text="2016-12-20-20:23 过期"
+            tools:text="2020-12-20-20:23 过期"
             android:textColor="#D97262"
             android:textSize="12sp"/>
 

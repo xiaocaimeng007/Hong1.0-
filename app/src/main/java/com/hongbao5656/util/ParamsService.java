@@ -338,9 +338,28 @@ public class ParamsService {
     }
 
     /**
-     * 微信支付
+     * 银联支付
      */
     public String alipay(
+            String ProductID
+//                        String body,int total_fee,
+//                        String spbill_create_ip,String time_start,
+//                        String time_expire,String notify_url
+    ) {
+//        data1.put("body", body);
+//        data1.put("total_fee", total_fee);
+//        data1.put("spbill_create_ip", spbill_create_ip);
+//        data1.put("time_start", time_start);
+//        data1.put("time_expire", time_expire);
+//        data1.put("notify_url", notify_url);
+//        data1.put("trade_type", "APP");
+        data1.put("ProductID", ProductID);
+        return getParamsJsonString(data1, Constants.unionpay);
+    }
+    /**
+     * 支付宝支付
+     */
+    public String unionpay(
             String ProductID
 //                        String body,int total_fee,
 //                        String spbill_create_ip,String time_start,

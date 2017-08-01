@@ -195,5 +195,4 @@
         android:textColor="#FFF"
         android:textSize="18sp"
         android:text="确认支付"/>
-
 </LinearLayout>
