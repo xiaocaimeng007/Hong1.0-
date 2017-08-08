@@ -502,8 +502,10 @@ public class TZDWeiActivity extends BaseActivity implements HttpDataHandlerListe
         if (mListener != null && amapLocation != null) {
             if (amapLocation != null
                     && amapLocation.getErrorCode() == 0) {
-                tv_location.setText(amapLocation.getAddress());
-                mListener.onLocationChanged(amapLocation);// 显示系统小蓝点
+                if (tv_location==null) {
+                    tv_location.setText(amapLocation.getAddress());
+                    mListener.onLocationChanged(amapLocation);// 显示系统小蓝点
+                }
             } else {
                 String errText = "定位失败," + amapLocation.getErrorCode() + ": " + amapLocation.getErrorInfo();
                 MLog.e("AmapErr", errText);
