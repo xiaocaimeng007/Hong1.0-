@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="action_settings">Settings</string>
-    <string name="app_name">鸿运天下</string>
+    <string name="app_name">智运天下</string>
     <string name="creditrating">每使用鸿宝交易一次，就可以对交易对象作一次信用评价。
             评价分为 "好评+1"、"中评0"、"差评-1" 三类.</string>
     <string name="scan_text">扫二维码查看相关资料</string>

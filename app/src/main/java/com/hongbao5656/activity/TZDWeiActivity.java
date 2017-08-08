@@ -361,9 +361,13 @@ public class TZDWeiActivity extends BaseActivity implements HttpDataHandlerListe
                 aMap.animateCamera(CameraUpdateFactory.newLatLngZoom(
                         latLng, 15));
                 regeoMarker.setPosition(convertToLatLng(latLonPoint));
-                tv_location.setText(addressName);
-                tv_location_time.setText(lasttime);
-                TU.show(TZDWeiActivity.this, addressName);
+                if (addressName!=null) {
+                    tv_location.setText(addressName);
+                }
+                    tv_location_time.setText(lasttime);
+
+
+                //TU.show(TZDWeiActivity.this, addressName);
             } else {
                 TU.show(TZDWeiActivity.this, R.string.no_result);
             }

@@ -118,7 +118,7 @@
         android:layout_width="fill_parent"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_height="390dp">
+        android:layout_height="340dp">
     </com.amap.api.maps.MapView>
 
     <RelativeLayout
@@ -139,7 +139,7 @@
             android:singleLine="true"
             android:text="当前位置："
             android:textColor="#333333"
-            android:textSize="13sp"/>
+            android:textSize="14sp"/>
 
         <TextView
             android:id="@+id/tv_location"
@@ -152,6 +152,7 @@
             android:maxLines="2"
             android:ellipsize="middle"
             android:text=""
+            android:singleLine="false"
             android:textColor="#0C6EB9"
             android:textSize="17sp"/>
 

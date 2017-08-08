@@ -63,7 +63,7 @@ public class TaoCanAdapter extends BaseAdapter {
     public View getView(final int position, View convertView, ViewGroup parent) {
         ViewHolder holder = null;
         if (convertView == null) {
-            convertView = LayoutInflater.from(context).inflate(R.layout .list_item_zhifutaocan, null);
+            convertView = LayoutInflater.from(context).inflate(R.layout.list_item_zhifutaocan, null);
             holder = new ViewHolder();
             holder.tv_taocan = (TextView) convertView.findViewById(R.id.tv_taocan);
             holder.itemBlock = (LinearLayout) convertView.findViewById(R.id.itemblock);

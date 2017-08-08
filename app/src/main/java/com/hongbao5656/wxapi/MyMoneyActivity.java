@@ -276,8 +276,8 @@ public class MyMoneyActivity
             sysProvider —— 保留使用，这里输入null
             orderInfo —— 订单信息为交易流水号，即TN，为商户后台从银联后台获取。
             mode —— 银联后台环境标识，“00”将在银联正式环境发起交易,“01”将在银联测试环境发起交易*/
-            String serverMode = "01";
-            UPPayAssistEx.startPay(MyMoneyActivity.this, null, null, tn, serverMode);
+            /*String serverMode = "01";
+            UPPayAssistEx.startPay(MyMoneyActivity.this, null, null, tn, serverMode);*/
         } else {
             if (connectionId == com.hongbao5656.util.Constants.online_3g) {
                 datas_3gonlin = IMap.getData2FromResponse(iParams, VO.class);
