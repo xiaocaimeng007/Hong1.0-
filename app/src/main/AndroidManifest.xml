@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.hongbao5656">
+    package="com.zhiyun20170809">
 
     <uses-sdk tools:overrideLibrary="com.example.aaron.library" />
 
@@ -73,14 +73,14 @@
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"></uses-permission>
 
     <application
-        android:name=".base.App"
+        android:name="com.zhiyun20170809.base.App"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:persistent="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activity.LaunchActivity"
+            android:name="com.zhiyun20170809.activity.LaunchActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -88,135 +88,135 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.GuideActivity"
+            android:name="com.zhiyun20170809.activity.GuideActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.MainActivity"
+            android:name="com.zhiyun20170809.activity.MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.LoginActivity"
+            android:name="com.zhiyun20170809.activity.LoginActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.RegisterActivity"
+            android:name="com.zhiyun20170809.activity.RegisterActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.ForgetPasswordActivity"
+            android:name="com.zhiyun20170809.activity.ForgetPasswordActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.PublishSupplyActivity"
+            android:name="com.zhiyun20170809.activity.PublishSupplyActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.AdDetailActivity"
+            android:name="com.zhiyun20170809.activity.AdDetailActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.WebBrowserActivity"
+            android:name="com.zhiyun20170809.activity.WebBrowserActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.SupplyDetailActivity"
+            android:name="com.zhiyun20170809.activity.SupplyDetailActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.SupplyDetailBaoJiaActivity"
+            android:name="com.zhiyun20170809.activity.SupplyDetailBaoJiaActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.PersionCertificationActivity"
+            android:name="com.zhiyun20170809.activity.PersionCertificationActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity
-            android:name=".activity.DriverCertificationActivity"
+            android:name="com.zhiyun20170809.activity.DriverCertificationActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity
-            android:name=".activity.ShipperCertificationActivity"
+            android:name="com.zhiyun20170809.activity.ShipperCertificationActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity
-            android:name=".activity.AddOffenLineActivity"
+            android:name="com.zhiyun20170809.activity.AddOffenLineActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.SelectPlaceActivity"
+            android:name="com.zhiyun20170809.activity.SelectPlaceActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.LCYJActivity"
+            android:name="com.zhiyun20170809.activity.LCYJActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.EmptyCarActivity"
+            android:name="com.zhiyun20170809.activity.EmptyCarActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.MapDetailActivity"
+            android:name="com.zhiyun20170809.activity.MapDetailActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.DriveRouteDetailActivity"
+            android:name="com.zhiyun20170809.activity.DriveRouteDetailActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.SeekCarsActivity"
+            android:name="com.zhiyun20170809.activity.SeekCarsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.EmptyCarShowActivity"
+            android:name="com.zhiyun20170809.activity.EmptyCarShowActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.ShowLineActivity"
+            android:name="com.zhiyun20170809.activity.ShowLineActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.TZDWeiActivity"
+            android:name="com.zhiyun20170809.activity.TZDWeiActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.WeatherSearchActivity"
+            android:name="com.zhiyun20170809.activity.WeatherSearchActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.FeedBackActivity"
+            android:name="com.zhiyun20170809.activity.FeedBackActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.SeekCarShowActivity"
+            android:name="com.zhiyun20170809.activity.SeekCarShowActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.SetCarLenActivity"
+            android:name="com.zhiyun20170809.activity.SetCarLenActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.ScanQRActivity"
+            android:name="com.zhiyun20170809.activity.ScanQRActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.MyDealActivity"
+            android:name="com.zhiyun20170809.activity.MyDealActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.MoreActivity"
+            android:name="com.zhiyun20170809.activity.MoreActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.ComplaintActivity"
+            android:name="com.zhiyun20170809.activity.ComplaintActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.BaoJiaActivity"
+            android:name="com.zhiyun20170809.activity.BaoJiaActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.ShowBaoJiaActivity"
+            android:name="com.zhiyun20170809.activity.ShowBaoJiaActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.CarDetailActivity"
+            android:name="com.zhiyun20170809.activity.CarDetailActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.CreditRatingActivity"
+            android:name="com.zhiyun20170809.activity.CreditRatingActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.SeekMyCarActivity"
+            android:name="com.zhiyun20170809.activity.SeekMyCarActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.ServiceActivity"
+            android:name="com.zhiyun20170809.activity.ServiceActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.OffenSupplyActivity"
+            android:name="com.zhiyun20170809.activity.OffenSupplyActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.AgreementActivity"
+            android:name="com.zhiyun20170809.activity.AgreementActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.AlipayRechargeActivity"
+            android:name="com.zhiyun20170809.activity.AlipayRechargeActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.RecordActivity"
+            android:name="com.zhiyun20170809.activity.RecordActivity"
             android:screenOrientation="portrait" />
 
         <service android:name="com.amap.api.location.APSService"/>
         <service
-            android:name=".service.LocationServiceForGaoDe"
+            android:name="com.zhiyun20170809.service.LocationServiceForGaoDe"
             android:enabled="true">
             <intent-filter android:priority="1000">
                 <action android:name="com.dbjtech.myservice" />
@@ -224,25 +224,25 @@
         </service>
 
         <!-- service销毁广播 -->
-        <receiver android:name=".receiver.ServiceDestroyReceiver">
+        <receiver android:name="com.zhiyun20170809.receiver.ServiceDestroyReceiver">
             <intent-filter>
                 <action android:name="com.service.xastdm.destroy" />
             </intent-filter>
         </receiver>
 
         <!-- 用户解锁广播 -->
-        <receiver android:name=".receiver.HomeReceiver">
+        <receiver android:name="com.zhiyun20170809.receiver.HomeReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.USER_PRESENT" />
             </intent-filter>
         </receiver>
 
         <!-- 定时器广播 -->
-        <receiver android:name=".receiver.AlarmReceiver" />
+        <receiver android:name="com.zhiyun20170809.receiver.AlarmReceiver" />
 
         <!-- 网络变化广播 -->
         <receiver
-            android:name=".receiver.NetReceiver"
+            android:name="com.zhiyun20170809.receiver.NetReceiver"
             android:enabled="true">
             <intent-filter android:priority="1000">
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
@@ -254,7 +254,7 @@
 
         <!-- 用户开机广播 -->
         <receiver
-            android:name=".receiver.BootReceiver"
+            android:name="com.zhiyun20170809.receiver.BootReceiver"
             android:enabled="true">
             <intent-filter android:priority="1000">
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
@@ -265,7 +265,7 @@
 
         <!-- 微信开始//////////////////////////////////////////////////////////////////////////////////// -->
         <activity
-            android:name=".wxapi.MyMoneyActivity"
+            android:name="com.zhiyun20170809.wxapi.MyMoneyActivity"
             android:exported="true"
             android:launchMode="singleTop" />
         <activity
@@ -328,7 +328,7 @@
 
         <!-- 微信分享回调的Activity处理 -->
         <activity
-            android:name=".wxapi.WXEntryActivity"
+            android:name="com.zhiyun20170809.wxapi.WXEntryActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="true"
             android:screenOrientation="portrait"
@@ -339,7 +339,7 @@
         <!-- 高德地图START/////////////////////////////////////////////////////////////// -->
         <meta-data
             android:name="com.amap.api.v2.apikey"
-            android:value="33d9f1d248307536c957130ce0269e5f" />
+            android:value="0eddb471b407349f40f3a784a031e770" />
         <!-- 定位需要的服务 使用2.0的定位需要加上这个 -->
         <service android:name="com.amap.api.location.APSService" />
         <!-- 高德地图END//////////////////////////////////////////////////////////// -->
@@ -347,12 +347,12 @@
 
         <!-- alipay支付 sdk begin////////////////////////////////////////////////////////////////////// -->
         <activity
-            android:name=".alipay.H5PayDemoActivity"
+            android:name="com.zhiyun20170809.alipay.H5PayDemoActivity"
             android:configChanges="orientation|keyboardHidden|navigation"
             android:exported="false"
             android:screenOrientation="behind" />
         <activity
-            android:name=".alipay.PayDemoActivity"
+            android:name="com.zhiyun20170809.alipay.PayDemoActivity"
             android:screenOrientation="portrait" />
         <!-- 未安装支付宝app时的回掉 -->
         <activity
@@ -364,7 +364,7 @@
         <!-- alipay支付 sdk end//////////////////////////////////////////////////////////////////////// -->
 
 
-        <!-- 极光推送 开始////////////////////////////////////////////////////////////////////////////// -->
+        <!-- 极光推送   Master Secret0b4f7919c193f606bf23e289 开始////////////////////////////////////////////////////////////////////////////// -->
         <!-- Rich push 核心功能 since 2.0.6 -->
         <activity
             android:name="cn.jpush.android.ui.PopWinActivity"
@@ -445,7 +445,7 @@
             android:exported="false" />
         <!-- User defined.  For test only  用户自定义的广播接收器 -->
         <receiver
-            android:name=".jpush.JpushReceiver"
+            android:name="com.zhiyun20170809.jpush.JpushReceiver"
             android:enabled="true"
             android:exported="false">
             <intent-filter>
@@ -474,8 +474,8 @@
             android:value="1e9298b35b5f76e984c71a65" />
 
         <!-- 极光推送 结束////////////////////////////////////////////////////////////////////////////// -->
-        <activity android:name=".activity.PayActivity" />
-        <activity android:name=".activity.DailyServiceActivity"></activity>
+        <activity android:name="com.zhiyun20170809.activity.PayActivity" />
+        <activity android:name="com.zhiyun20170809.activity.DailyServiceActivity"></activity>
     </application>
 
 </manifest>
